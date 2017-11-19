@@ -189,7 +189,7 @@ element.style {
 											</c:when>
 											<c:otherwise>
 												<td class="film_a"><a href="javascript:void(0)"
-													onclick="payment(${item['orderNumber']})" target="_blank">付款</a></td>
+													onclick="payment(${item['orderNumber']})" target="_blank" style="color:red;">付款</a></td>
 											</c:otherwise>
 										</c:choose>
 

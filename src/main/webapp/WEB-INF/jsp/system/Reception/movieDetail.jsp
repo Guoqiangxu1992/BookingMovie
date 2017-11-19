@@ -22,12 +22,12 @@
 }
 
 .bank_nav3 li {
-	background: url(https://member.hipiao.com/res/images/film/btn_01-2.gif)
+	background: url(${xgq}/images/btn_01-2.gif)
 		no-repeat bottom;
 }
 
 .bank_nav3 li.hover {
-	background: url(https://member.hipiao.com/res/images/film/btn_01-2.gif)
+	background: url(${xgq}/images/btn_01-2.gif)
 		no-repeat top;
 }
 
@@ -228,9 +228,9 @@ element.style {
 									<td class="font8"><span style="color: red;">${item['number']}</span></td>
 									<td class="font8" contentEditable="true"
 										id="orderNum${item['id']}"><span style="color: red;">1</span></td>
-									<td class="film_a"><a href="javascript:void(0)"
+									<td class="film_a" ><a href="javascript:void(0)"
 										onclick="orderMovie(${item['movieId']},${item['id']})"
-										target="_blank">订 票</a></td>
+										target="_blank" style="color:red;">订 票</a></td>
 								</tr>
 							</c:forEach>
 						</tbody>

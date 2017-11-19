@@ -234,7 +234,7 @@ a:hover{color:#a7cd1a;text-decoration:underline;}
 .cityName li {display:inline-block;height:28px;line-height:28px;text-align:left;float:left;margin-right:22px;background-color:#fff;color:#000;cursor:pointer;}
 .cityName li:hover{color:#090;}
 .cityName li a {color:#333;text-decoration:none;}
-.cityName li a:hover {color:#539300!important;}
+.cityName li a:hover {color:#539300!important;} 
 .cityliNewAga {width:500px;background-color:#fff;overflow:hidden;border:1px solid #e8e8e8;position:absolute;left:20px;top:70px;display:none;}
 /* kai su buy */
 .kaisuGoupQu{position:absolute;display:none;width:983px;height:535px;background-image:url(http://city.hipiao.com/res/images/indexs/ksgpBj.png);overflow:hidden;z-index:200;}
@@ -336,7 +336,7 @@ a:hover{color:#a7cd1a;text-decoration:underline;}
 
 @import url('basic.css');
 
-.film_tt{background: url(http://city.hipiao.com/res/images/film/icon1.gif) no-repeat 10px 5px;border-bottom: 1px solid #9f9f9f;height: 30px;line-height: 30px;font-size: 14px;padding-left: 68px;margin-bottom: 10px;}
+.film_tt{background: url(/images/icon1.gif) no-repeat 10px 5px;border-bottom: 1px solid #9f9f9f;height: 30px;line-height: 30px;font-size: 14px;padding-left: 68px;margin-bottom: 10px;}
 .film_tt span{display: inline-block;float: right;}
 .film_tt span a{margin-left: 20px;}
 .l_w{width: 670px;float: left;}
@@ -374,12 +374,12 @@ a:hover{color:#a7cd1a;text-decoration:underline;}
 .film_table td{padding: 5px 3px;text-align: center;line-height: 20px;border: 1px solid #E0E0E0;}
 .film_table th{border: 1px solid #E0E0E0;white-space: nowrap;font-weight: 400;color: #303030;}
 .film_table th p{background: #E5E5E5;border: 1px solid #ffffff;border-right: 1px solid #E5E5E5;padding: 5px 3px;text-align: center;line-height: 20px;}
-.film_a a{display: inline-block;background: url(http://city.hipiao.com/res/images/ciname/but-bg1.gif) no-repeat;width: 52px;height: 20px;line-height: 20px;text-align: center;color: #ffffff;margin: 0px auto;}
+.film_a a{display: inline-block;background: url(../images/but-bg1.gif) no-repeat;width: 52px;height: 20px;line-height: 20px;text-align: center;color: #ffffff;margin: 0px auto;}
 .film_tt2{font-weight: 600;margin: 0px 17px 10px 9px;}
 .film_tt2 span{float: right;font-weight: 400;}
 .film_c7{width: 661px;margin: 0px 0px 0px 9px;}
-.film_c7 .tbg{background: url(http://city.hipiao.com/res/images/film/tbg1.gif) no-repeat;height: 6px;display: block;overflow: hidden;}
-.film_c7 .bbg{background: url(http://city.hipiao.com/res/images/film/bbg1.gif) no-repeat;height: 6px;display: block;overflow: hidden;}
+.film_c7 .tbg{background: url(../images/tbg1.gif) no-repeat;height: 6px;display: block;overflow: hidden;}
+.film_c7 .bbg{background: url(/images/bbg1.gif) no-repeat;height: 6px;display: block;overflow: hidden;}
 .film_c7_bor{border-left: 1px solid #CECECE;border-right: 1px solid #CECECE;width: 639px;padding: 5px 10px;overflow: hidden;}
 .film_c8{width: 1000px;}
 .film_c8 li{width: 198px;float: left;margin-right: 20px;}
@@ -390,8 +390,8 @@ a:hover{color:#a7cd1a;text-decoration:underline;}
 .film_c9 li{min-width: 143px;float: left;margin-right: 8px;vertical-align: bottom;}
 .film_c9 img{border: 1px solid #D1D1D1;margin-bottom: 5px;}
 .r_w{width: 296px;float: right;}
-.r_c1{background: url(http://city.hipiao.com/res/images/ciname/bbg1.gif) no-repeat bottom;padding-bottom: 5px;}
-.r_c1_tt{background: url(http://city.hipiao.com/res/images/ciname/t-bg1.gif) no-repeat;height: 25px;padding: 8px 0px 0px 10px;}
+.r_c1{background: url(/images/bbg1.gif) no-repeat bottom;padding-bottom: 5px;}
+.r_c1_tt{background: url(../images/t-bg1.gif) no-repeat;height: 25px;padding: 8px 0px 0px 10px;}
 .r_c1_bor{border-left: 1px solid #D4D4D4;border-right: 1px solid #D4D4D4;padding: 10px 10px 1px;height: 1%;}
 .r_c1_1{border-bottom: 1px dashed #E0E0E0;padding-bottom: 12px;margin-bottom: 12px;height: 1%;overflow: hidden;}
 .r_c1_1 dt{float: left;}
@@ -422,7 +422,7 @@ a:hover{color:#a7cd1a;text-decoration:underline;}
 .film_c4 dd {padding-left:125px;}
 .film_c4 dd label {width:125px;margin-left: -125px;}
 
-.film_c5 dt{font-size:15px;background:url(http://city.hipiao.com/res/images/film/icon3a.gif) 0 10px no-repeat;text-indent:10px; font-weight:600;}
+.film_c5 dt{font-size:15px;background:url(/images/icon3a.gif) 0 10px no-repeat;text-indent:10px; font-weight:600;}
 .film_c5 dt a {color:#539300;}
 .film_c5 dd {text-indent:10px;}
 .film_ge {heihgt:10px;border-top:1px dashed #DCDCDC;margin:20px 6px 12px 9px;}
@@ -631,7 +631,7 @@ a:hover{color:#a7cd1a;text-decoration:underline;}
 	bottom: -1px;
 	}
 .bank_nav02 li{
-	background: url(http://city.hipiao.com/res/images//movie/btn_01.gif) no-repeat bottom;
+	background: url(/images/btn_01.gif) no-repeat bottom;
 	width: 85px;
 	height: 32px;
 	line-height: 32px;
@@ -671,8 +671,8 @@ width:470px;height: 32px;padding-top: 10px;text-align: right;position:relative;t
 .mov_t span {float:left;line-height:20px;}
 .mov_t dl {width:84px;display:inline-block; line-height:20px;float:right;}
 
-.r_c5{background: url(http://city.hipiao.com/res/images//movie/bbg10.gif) no-repeat center bottom;padding-bottom: 5px;margin-bottom:12px;}
-.r_c5_tt{background: url(http://city.hipiao.com/res/images//index/tbg1.gif) no-repeat;height: 26px;padding: 6px 0px 0px 11px;}
+.r_c5{background: url(/images/bbg10.gif) no-repeat center bottom;padding-bottom: 5px;margin-bottom:12px;}
+.r_c5_tt{background: url(./images/tbg1.gif) no-repeat;height: 26px;padding: 6px 0px 0px 11px;}
 .r_c5_dis{padding: 9px 9px 10px;border-left: 1px solid #D4D4D4;border-right: 1px solid #D4D4D4;}
 .r_c5_3{margin-top: 12px;height: 1%;}
 .r_c5_3 dt{float: left;}
@@ -682,23 +682,23 @@ width:470px;height: 32px;padding-top: 10px;text-align: right;position:relative;t
 .r_c5 ul {padding-top:10px;border-left: 1px solid #D4D4D4;border-right: 1px solid #D4D4D4;}
 .r_c5 ul li {padding-bottom:5px;display:inline-block;}
 .r_c5 li span {display:block;float:left;width:19px;height:19px;margin-left:9px;margin-right:9px;}
-span.n_1 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 0;}
-span.n_2 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -19px;}
-span.n_3 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -38px;}
-span.n_4 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -57px;}
-span.n_5 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -76px;}
-span.n_6 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -95px;}
-span.n_7 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -114px;}
-span.n_8 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -133px;}
-span.n_9 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -152px;}
-span.n_10 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -171px;}
+span.n_1 {background:url(/images/doc10.gif) 0 0;}
+span.n_2 {background:url(/images/doc10.gif) 0 -19px;}
+span.n_3 {background:url(/images/doc10.gif) 0 -38px;}
+span.n_4 {background:url(/images/doc10.gif) 0 -57px;}
+span.n_5 {background:url(/images/doc10.gif) 0 -76px;}
+span.n_6 {background:url(/images/doc10.gif) 0 -95px;}
+span.n_7 {background:url(/images/doc10.gif) 0 -114px;}
+span.n_8 {background:url(/images/doc10.gif) 0 -133px;}
+span.n_9 {background:url(/images/doc10.gif) 0 -152px;}
+span.n_10 {background:url(/images/doc10.gif) 0 -171px;}
 .r_c5 li {line-height:19px;}
 .r_c6 img{margin-bottom: 5px;}
 a.link_r {color:#303030; text-decoration:none;width:185px;height:19px;display:inline-block;overflow:hidden;line-height:19px;float:left;}
 a.link_r:hover { text-decoration:underline;}
 .but_15{
 	display: block;
-	background: url(http://city.hipiao.com/res/images//movie/but-bg15.gif) no-repeat;
+	background: url(/images/but-bg15.gif) no-repeat;
 	width: 54px;
 	height: 17px;
 	font-size: 12px;
