@@ -1,0 +1,714 @@
+@charset "utf-8";
+*{margin:0px;padding:0px;}
+body{background:#fff;font:12px/18px '微软雅黑',"宋体", Arial, Verdana, sans-serif;color:#4a4746;}
+img{border:none;border:0px;}
+ul,li{list-style:none;}
+dt img,dd img{vertical-align:middle;}
+a{color:#666666;text-decoration:none;}
+a:hover{color:#a7cd1a;text-decoration:underline;}
+.clear{clear:both;height:1px;line-height:0px;font-size:0px;}
+.disNone{display:none;}
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.outside{width:981px;margin:0px auto;}
+.indexLeft{width:617px;}
+.indexRight{width:332px;}
+/* index title */
+.indexTt{border-bottom:1px solid #cccccc;height:30px;font:18px/30px '微软雅黑';margin-bottom:15px;padding-left:16px;color:#666;font-weight:600;}
+.indexTt span{float:right;padding-right:12px;font-size:12px;}
+.indexTt span a{text-decoration:underline;color:#999999;}
+/* notice */
+.notice{background:#fffcc6;height:25px;line-height:25px;text-align:center;color:#666666;}
+.notice img{float:right;cursor:pointer;}
+/* zt film */
+.ztFilm{height:80px;}
+.ztFiPo{position:relative;}
+.ztBtn{position:absolute;top:5px;right:6px;}
+/* head start */
+.headH{height:60px;position:relative;z-index:10;}
+.headH h1.logo{background:url(http://city.hipiao.com/res/images/indexs/indexLogoBg.png) no-repeat;width:101px;height:70px;padding-top:6px;padding-left:27px;position:absolute;left:0px;top:0px;z-index:10;}
+.headH .nav{width:330px;float:left;padding-top:18px;padding-left:145px;}
+.headH .nav li{float:left;margin-right:20px;height:29px;font:17px/27px '微软雅黑';}
+.headH .nav li a{display:block;padding:0px 5px;color:#999999;white-space:nowrap;}
+.headH .nav li a:hover,.headH .nav li.hover a{border-bottom:2px solid #a7cd1a;color:#a7cd1a;text-decoration:none;}
+.headRight{width:210px;float:right;position:relative;z-index:10;}
+.headLogin{padding-top:23px;font:16px/18px '微软雅黑';color:#cccccc;padding-right:20px;text-align:right;}
+.headLogin a{color:#999999;}
+.headLogin a:hover,.headLogin a.hover{color:#a7cd1a;}
+.alLogin{padding-top:15px;line-height:17px;color:#999999;}
+.alLogin p{margin-bottom:3px;}
+.alLogin span{color:#a7cd1a;}
+.alLogin b{padding:0px 10px;}
+.alLogin a{color:#999999;}
+.myHp{border:1px solid #c6cbcb;background:#fff;width:117px;padding:6px 0px 7px;position:absolute;left:10px;top:55px;z-index:10;display:none;}
+.myHp h3{border-bottom:1px solid #d2d2d2;width:106px;height:29px;margin:0px auto 5px;line-height:29px;color:#d2d2d2;font-size:16px;text-align:center;}
+.myHp li{height:25px;line-height:25px;text-align:center;color:#666666;font-size:14px;}
+.myHp li a{display:block;height:25px;}
+.myHp li a:hover, .myHp li a.hover{background:#a7cd1a;color:#fff;text-decoration:none;}
+.headLine{background:#e9e9e9;height:1px;line-height:1px;margin-bottom:45px;}
+/* big turn img */
+.bigOutBor{min-width:981px;height:401px;}
+#bigImg{width:100%;height:401px;position:relative;}
+#slides{width:100%;height:401px;position:relative;}
+#slides li{width:100%; height:100%;position:absolute;}
+#slides li a{display:block;width:100%;height:100%;text-indent:-9999px;}
+#pagination{position:absolute;left:50%;top:370px;z-index:99;padding:5px 15px 5px 0;}
+#pagination li{background:url(http://city.hipiao.com/res/images/indexs/turnImgOff.png) no-repeat;width:15px;height:15px;float:left;margin-right:15px;}
+#pagination li a{display:block;width:100%;height:100%;text-indent:-9999px;}
+#pagination li.current{background:url(http://city.hipiao.com/res/images/indexs/turnImgOn.png) no-repeat;}
+/* quick buy start */
+.quickPos{position:relative;height:1px;z-index:10;}
+.quickBtn{position:relative;height:1px;}
+.quickBuy{position:absolute;left:538px;top:0px;height:72px;overflow:hidden;z-index:10;}
+.quickLBg{background:url(http://city.hipiao.com/res/images/indexs/topLbg.png) no-repeat;display:block;width:6px;height:72px;float:left;}
+.quickBuy ul{background:url(http://city.hipiao.com/res/images/indexs/topRbg.png) no-repeat right;padding-right:6px;height:72px;float:left;font-size:18px;color:#fff;}
+.quickBuy ul li{background:#a7cd1a;float:left;padding:0px 10px;height:72px;cursor:pointer;font-family:'微软雅黑';}
+.quickBuy ul li.quickCity{background:#a7cd1a url(http://city.hipiao.com/res/images/indexs/cityIcon.gif) no-repeat center 10px;}
+.quickBuy ul li.quickCity b{display:block;background:url(http://city.hipiao.com/res/images/indexs/icon1.gif) no-repeat right 50px;padding-top:45px;padding-right:20px;}
+.quickBuy ul li.quickTickt{background:#a7cd1a url(http://city.hipiao.com/res/images/indexs/quickIcon.gif) no-repeat center 10px;}
+.quickBuy ul li.quickTickt b{display:block;padding-top:45px;}
+.quickBuy ul li.quickLine{padding:0px;width:1px;overflow:hidden;}
+.quickBuy ul li.quickLine b{display:block;background:#fff;width:1px;height:57px;margin-top:10px;}
+/* hot and being */
+.hotBeNav{border-bottom:2px solid #eeeeee;height:24px;padding-left:30px;margin:24px 0px 5px;}
+.hotBeNav li{width:100px;float:left;text-align:center;line-height:24px;color:#666;font-size:16px;cursor:pointer;font-family:'微软雅黑';}
+.hotBeNav li.hover{font-weight:600;font-size:20px;}
+.cinameImg{width:981px;height:320px;overflow: hidden;position:relative;margin-bottom:30px;}
+.leftBtn{width:29px;position: absolute;left:0px;top:78px;cursor:pointer;}
+.leftBtn a, .rightBtn a{display:block;width:29px;height:76px;background:url(http://city.hipiao.com/res/images/indexs/filmsBtn.gif) no-repeat top;}
+.leftBtn a{background-position:center top;}
+.rightBtn{width:29px;position: absolute;right: 0px;top:78px;cursor:pointer;}
+.rightBtn a{background-position:center -76px;}
+.noLeft a{background-position:center -152px;cursor:default;}
+.noRight a{background-position:center bottom;cursor:default;}
+.cimates{width:915px;height:320px;overflow: hidden;position:relative;margin-left:34px;}
+.conList{width:30000px;position:absolute;left:0px;}
+.conList dl{width:167px;float:left;padding-right:16px;}
+.conList dt{background:url(http://city.hipiao.com/res/images/indexs/dtBg.png) no-repeat left top;height:210px;padding:6px 0px 0px 11px;margin-bottom:7px;overflow:hidden;}
+.cinameName{color:#666666;padding-left:8px;height:1%;}
+.cinameName span{float:right;}
+.cinameName span b{color:#f39800;font-size:24px;font-weight:600;font-family:'微软雅黑';}
+.cinameName span b s{font-size:12px;font-weight:400;text-decoration:none;}
+.cinameName1{color:#666666;text-align:center;}
+.cinameBtn{margin:10px 0px 0px;}
+.cinameBtn a{background:url(http://city.hipiao.com/res/images/indexs/btnBuy.gif) no-repeat;display:block;width:100px;height:34px;margin:0px auto;}
+.cinameYg, .cinameTime{text-align:center;margin-top:10px;color:#666666;}
+.aa{display:none;}
+.noCinameImg{text-align:center;padding-top:70px;}
+.noCinameImg img{margin:0px 5px;}
+.upcoming dt{position:relative;}
+.upcoming dt span{display:block;background:url(http://city.hipiao.com/res/images/indexs/quickFilm.png) no-repeat;width:79px;height:46px;position:absolute;right:0px;top:6px;}
+/* hot act */
+.hotAct{width:272px;min-height:276px;float:left;margin-left:15px;position:relative;overflow:hidden;z-index:10;}
+.hotActs{width:816px;position:absolute;}
+.hotActs dl{width:272px;float:left;}
+.hotActs dd{color:#4a4647;line-height:17px;}
+.hotActs dd h2{line-height:33px;font-size:16px;}
+.hotIcon{position:absolute;right:0px;top:157px;padding-right:8px;}
+.hotIcon li{background:url(http://city.hipiao.com/res/images/indexs/hotActOff.png) no-repeat;width:9px;height:9px;float:left;margin-right:5px;}
+.hotIcon li.hover{background:url(http://city.hipiao.com/res/images/indexs/hotActOn.png) no-repeat;}
+.otherAct{border-left:1px dotted #eaeaea;width:287px;float:right;padding:0px 14px;}
+.otherAct dl{border-top:1px dotted #e7e7e7;height:126px;margin-bottom:11px;padding-top:11px;color:#4a4746;}
+.otherAct dl:first-child{border-top:none;padding-top:0px;}
+.otherAct dl a{color:#4a4746;}
+.otherAct dt{width:150px;float:left;}
+.otherAct dt img{background:#f8f8f8;padding:17px 14px;}
+.otherAct dd{line-height:17px;}
+.otherAct dd h3{font-size:16px;padding:18px 0px 12px;}
+/* ad turn */
+.adTurn{margin:42px 0px;width:618px;height:120px;position:relative;overflow:hidden;}
+.adTurns{width:3090px;position:absolute;}
+.adTurns li{float:left;}
+.adBtn{position:absolute;right:0px;top:100px;padding-right:10px;}
+.adBtn li{background:url(http://city.hipiao.com/res/images/indexs/adOff.png) no-repeat;width:11px;height:11px;float:left;margin-right:5px;}
+.adBtn li.hover{background:url(http://city.hipiao.com/res/images/indexs/adOn.png) no-repeat;}
+/* ad turn */
+.adTurn1{margin:42px 0px;width:618px;height:120px;position:relative;overflow:hidden;}
+.adTurns1{width:3090px;position:absolute;}
+.adTurns1 li{float:left;}
+.adBtn1{position:absolute;right:0px;top:100px;padding-right:10px;}
+.adBtn1 li{background:url(http://city.hipiao.com/res/images/indexs/adOff.png) no-repeat;width:11px;height:11px;float:left;margin-right:5px;}
+.adBtn1 li.hover{background:url(http://city.hipiao.com/res/images/indexs/adOn.png) no-repeat;}
+/* ad turn */
+.adTurn2{width:981px;height:120px;position:relative;overflow:hidden;margin-bottom:40px;}
+.adTurns1{width:4950px;position:absolute;}
+.adTurns2 li{float:left;}
+.adBtn2{position:absolute;right:0px;top:100px;padding-right:10px;}
+.adBtn2 li{background:url(http://city.hipiao.com/res/images/indexs/adOff.png) no-repeat;width:11px;height:11px;float:left;margin-right:5px;}
+.adBtn2 li.hover{background:url(http://city.hipiao.com/res/images/indexs/adOn.png) no-repeat;}
+/* news */
+.imgNews{width:245px;float:left;padding-left:16px;color:#100908;}
+.imgNews dt h3{font-size:16px;line-height:17px;margin-bottom:12px;font-weight:600;}
+.imgNews dd{line-height:17px;margin-top:10px;}
+.fontNews{border-left:1px dotted #eaeaea;width:306px;float:right;padding:0px 14px;}
+.fontNews dl{border-top:1px dotted #e7e7e7;margin-bottom:2px;padding-top:12px;color:#100908;}
+.fontNews dl:first-child{border-top:none;padding-top:0px;}
+.fontNews dt{font-size:16px;line-height:17px;font-weight:600;margin-bottom:7px;}
+.fontNews dd{line-height:17px;}
+.fontNews dd.ddA{text-align:right;}
+.fontNews dd.ddA a{color:#999999;text-decoration:underline;}
+/* vidio list */
+.vidioList{height:143px;overflow:hidden;}
+.vidioList dl{width:197px;height:143px;float:left;margin-left:12px;display:inline;}
+.vidioList dl:first-child{margin-left:0px;}
+.vidioList dt{background:url(http://city.hipiao.com/res/images/indexs/vidioBg.gif) no-repeat;width:195px;height:121px;padding:1px;}
+.vidioList dd, .vidioList dd a{color:#59493f;font-size:14px;font-weight:600;text-align:center;}
+/* calendar */
+.calendar{background:url(http://city.hipiao.com/res/images/indexs/dayBg.jpg) no-repeat center bottom;padding-bottom:10px;}
+.calendar table{border-collapse:collapse;width:100%;}
+.calendar td{padding-bottom:5px;padding-right:3px;}
+/* emv */
+.indexEmv{}
+.emvImg{border:1px solid #f3f3f3;padding:22px 0px 8px 28px;height:1%;overflow:hidden;}
+.emvImg dl{width:124px;float:left;margin-right:19px;}
+.emvImg dd{text-align:center;height:24px;line-height:24px;color:#999999;}
+.emvImg dd a{text-decoration:underline;}
+.emvPoin{background:url(http://city.hipiao.com/res/images/indexs/evmBg.gif) no-repeat center top;padding-top:13px;text-align:center;color:#999;font-family:'微软雅黑';font-weight:600;}
+/* film city */
+.filmCityList{border-bottom:1px solid #e1e1e1;padding-bottom:2px;margin-bottom:4px;width:311px;margin-left:12px;height:1%;overflow:hidden;}
+.filmCityList h3{color:#444444;height:24px;line-height:24px;font-size:14px;}
+.filmCityList p{color:#999;line-height:17px;}
+.filmCityList p.price{float:right;padding-top:12px;}
+.filmCityList p.price b{color:#f39800;font-size:24px;font-weight:600;font-family:'微软雅黑';}
+.filmCityList p.price s{font-size:12px;font-weight:400;text-decoration:none;}
+/* hp vote */
+.hpVote{padding-left:12px;margin-bottom:40px;}
+.voteImg{margin-bottom:30px;}
+.voteList1{height:28px;}
+.voteList1 label{font-size:14px;color:#666666;}
+.voteList1 label input{margin-right:3px;}
+.voteList1 span{float:right;}
+.voteList1 span b{display:block;text-align:center;}
+.voteBtn{text-align:center;}
+.voteBtn img{cursor:pointer;}
+/* right ad */
+.adRightBg{background:url(http://city.hipiao.com/res/images/indexs/adBg1.gif) no-repeat center bottom;padding-bottom:9px;}
+/* other foot */
+.otherBor{border-top:1px solid #cccccc;padding-top:26px;height:1%;overflow:hidden;}
+.otherBor dt{color:#666666;font-size:14px;font-weight:600;line-height:19px;margin-bottom:5px;}
+.otherBor dd{line-height:21px;}
+.otherBor dd a{color:#666;}
+.otherBor .faq{width:330px;float:left;}
+.otherBor .faq s{display:block;background:url(http://city.hipiao.com/res/images/indexs/queIcon.gif) no-repeat center right;width:127px;min-height:95px;margin-right:20px;margin-top:10px;float:left;}
+.otherBor .inquire{width:310px;float:left;}
+.otherBor .inquire s{display:block;background:url(http://city.hipiao.com/res/images/indexs/flIcon.gif) no-repeat center right;border-left:1px dotted #eaeaea;width:107px;min-height:95px;margin-right:15px;margin-top:10px;float:left;}
+.otherBor .tel s{display:block;background:url(http://city.hipiao.com/res/images/indexs/telIcon.gif) no-repeat center right;border-left:1px dotted #eaeaea;width:107px;min-height:95px;margin-right:15px;margin-top:10px;float:left;}
+.otherBor .tel dd{color:#999;}
+.otherBor .tel dd span{font-family:Arial, Helvetica, sans-serif;font-size:18px;font-weight:600;color:#83837d;}
+/* foot nav */
+.footNav{border-top:1px solid #cccccc;border-bottom:1px solid #cccccc;height:28px;line-height:28px;font-size:14px;margin-top:33px;}
+.footNav a{display:inline-block;margin-left:27px;+margin-left:26px;}
+.footNav a:first-child{margin-left:0px;}
+/* zwgk */
+.zwgk{margin-top:49px;}
+/* footer */
+.footer{margin-top:40px;padding-bottom:10px;height:1%;overflow:hidden;}
+.footMark{width:440px;float:left;text-align:right;}
+.footMark span{display:inline-block;background:url(http://city.hipiao.com/res/images/indexs/footMark.gif) no-repeat left top;height:34px;}
+.footMark span.mark1{background-position:left top;width:114px;}
+.footMark span.mark2{background-position:-122px top;width:76px;}
+.footMark span.mark3{background-position:-206px top;width:85px;}
+.footMark span.mark4{background-position:-298px top;width:28px;}
+.footCrumb{float:left;padding-left:20px;line-height:17px;color:#868781;}
+/* margin */
+.marginT40{margin-top:40px;}
+/* tan ceng */
+.bank_nav_py {width:460px;height:25px;float:left;margin-left:20px;}
+.bank_nav_py li{height:25px;line-height:25px;color:#5f5f5f;font-weight:600;float:left;margin-right:8px;cursor:pointer;background-color:#d4d4d4;}
+.bank_nav_py li p {padding-left:12px;padding-right:12px;font-size:13px;font-family:Arial;}
+.bank_nav_py li.hover{background-color:#84b900;}
+.bank_nav_py li.hover p {color:#FFFFFF;}
+.mainCtiy{width:472px;margin-left:20px;margin-top:12px;margin-bottom:10px;*padding-bottom:10px;}
+/* city tanceng */
+/*.cityWaik {width:1000px;margin:0 auto;position:relative;height:500px;z-index:10;}*/
+.cityliNew {width:500px;background-color:#fff;overflow:hidden;border:1px solid #e8e8e8;position:absolute;left:430px;top:20px;display:none;z-index:10;}
+.cityliNew2 {left:27px;top:-310px;z-index:10001;}
+.cityPy {width:500px;height:10px;float:left;margin-top:8px;}
+.cityPy a {display:block;width:11px;height:10px;background:url(http://city.hipiao.com/res/images/indexs/tab-py.gif) no-repeat left top;float:right;margin-right:8px;}
+.firstZi {width:35px;text-align:left;vertical-align:top;height:35px;}
+.firstZi span {display:block;width:17px;height:17px;border:1px solid #84b900;float:left;margin-top:8px;color:#84b900;font-weight:bold;line-height:17px;text-align:center;font-family:Arial;}
+.none {display:none;}
+.cityHang .firstZi span {background-color:#84b900;color:#FFF;}
+.cityName {vertical-align:top;}
+.cityName ul {margin-top:3px;margin-bottom:10px;}
+.cityName li {display:inline-block;height:28px;line-height:28px;text-align:left;float:left;margin-right:22px;background-color:#fff;color:#000;cursor:pointer;}
+.cityName li:hover{color:#090;}
+.cityName li a {color:#333;text-decoration:none;}
+.cityName li a:hover {color:#539300!important;}
+.cityliNewAga {width:500px;background-color:#fff;overflow:hidden;border:1px solid #e8e8e8;position:absolute;left:20px;top:70px;display:none;}
+/* kai su buy */
+.kaisuGoupQu{position:absolute;display:none;width:983px;height:535px;background-image:url(http://city.hipiao.com/res/images/indexs/ksgpBj.png);overflow:hidden;z-index:200;}
+.guanbiBtn {position:absolute;right:6px;top:6px;}
+.nTab{height:80px;overflow:hidden;}
+.cityXuan2  {display:block;font-size:18px;font-family:微软雅黑;padding:6px 12px;border:1px solid #e8e8e8;float:left;margin-left:28px;margin-top:28px; cursor:pointer;}
+.cityXuan2 span {display:inline-block;background:url(http://city.hipiao.com/res/images/indexs/jiantouXia.png) no-repeat right;padding-right:20px;}
+#myTab {width:480px;height:40px;float:left;margin-left:25px;margin-top:28px;}
+#myTab li {display:inline-block;font-size:18px;font-family:微软雅黑;padding:7px 12px;background-color:#e8e8e8;color:#333;float:left;margin-right:10px;cursor:pointer;}
+#myTab li.active {background-color:#a7cd1a;color:#FFF;}
+.liQu01 {width:248px;height:410px;float:left;margin-left:28px;margin-right:18px;margin-top:20px;}
+.liQu02 {width:248px;height:410px;float:left;margin-right:18px;margin-top:20px;}
+.liQu03 {width:248px;height:410px;float:left;margin-right:18px;margin-top:20px;}
+.liQu04,.quickLc{width:137px;height:410px;float:left;margin-top:20px;}
+.kxH3 {height:20px;font-size:16px;color:#666666;font-family:微软雅黑; text-indent:20px;}
+.changciTt {height:16px;font-size:12px;margin-top:5px;}
+.kxGund {width:248px;height:372px;overflow:scroll;overflow-x:hidden;margin-top:25px;color:#666666;}
+.kxGund ul li {border:2px solid #FFF;background:none;width:220px;cursor:pointer; margin-bottom:3px;}
+.kxGund ul li.thisOver,
+.kxGund ul li:hover {border:2px solid #a7cd1a;background:url(http://city.hipiao.com/res/images/indexs/duiGou.png) no-repeat right bottom;}
+.kxGund .xuanCc li {height:20px;}
+.kxGund .rsFilm li {height:103px;}
+.kxGund .xuanYy li p {line-height:20px;padding-left:10px;padding-right:10px;}
+.changciTt span, .xuanCc span {display:block;width:60px;height:20px;line-height:20px;text-align:center;overflow:hidden;float:left;}
+.liQu03 span.cc-ting, .xuanCc span.cc-ting {width:90px;}
+.rsFilm .rsPic {width:68px;height:93px;float:left;margin-left:5px;margin-top:5px;}
+.rsFilm .rsPic img {width:68px;height:93px;}
+.rsFilm .rsfilmNr {width:140px;height:93px;overflow:hidden;float:left;margin-left:5px;margin-top:5px;}
+.rsFilm .rsfilmNr .rsTt {font-size:13px;height:30px;line-height:15px;color:#333;}
+.rsFilm .rsfilmNr .rsZhishi {font-size:14px;color:#ec6f26;height:18px;line-height:18px;font-weight:bold;}
+.rsFilm .rsfilmNr .rsLeixing,
+.rsFilm .rsfilmNr .rsDaoyan,
+.rsFilm .rsfilmNr .rsYanyuan{font-size:12px;height:22px;line-height:22px;width:140px;overflow:hidden;white-space:nowrap;}
+.rsZhishi{height:0px;overflow:hidden;display:none;}
+.ypTt {line-height:18px;max-height:36px;overflow:hidden;font-size:15px;color:#333;margin-top:20px;text-align:center;margin-bottom:5px;}
+.rsPic2 {width:135px;height:176px;}
+.rsPic2 img {width:135px;height:176px;}
+.yyName {line-height:15px;max-height:30px;overflow:hidden;font-size:12px;color:#333;margin-top:10px;text-align:left;margin-bottom:5px;}
+.fanyXx1, .fanyXx2 {text-align:center;}
+.fanyXx1 span{padding-left:5px; padding-right:5px; line-height:18px;color:#999;}
+.fanyXx2 span{padding-left:5px; padding-right:5px; line-height:18px;color:#333;}
+.geLine {height:25px; border-top:1px dashed #e8e8e8;}
+.lijiGoupiao{width:135px;height:41px;*width:139px;*height:45px;border:none;background:url(http://city.hipiao.com/res/images/indexs/lijigoupiao.png) no-repeat 0 0;cursor:pointer;*border:1px solid #FFF;}
+.quickLc{padding-top:50px;}
+.rebornAll{text-align:center;font-size:42px;padding-top:200px;font-family:'微软雅黑';color:#D8D8D8;}
+.rebornNews1{text-align:center;font-size:22px;padding-top:160px;margin-left:-50px;font-family:'微软雅黑';color:#D8D8D8;border-right:1px solid #D8D8D8;height:200px;}
+.rebornNews2{text-align:center;font-size:22px;padding-top:160px;margin-left:-50px;font-family:'微软雅黑';color:#D8D8D8;border-right:1px solid #D8D8D8;height:200px;}
+.rebornNews3{text-align:center;font-size:22px;padding-top:140px;margin-left:-50px;font-family:'微软雅黑';color:#D8D8D8;border-right:1px solid #D8D8D8;height:200px;}
+
+
+/* movie tanceng */
+.fudong_640 {
+    background: none repeat scroll 0 0 #000000;
+    border: 1px solid #000000;
+    position: absolute;
+    z-index: 110;
+}
+.fudong_title_640 {
+    background: url("http://city.hipiao.com/res/images/fudong-bg.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    height: 4.5726%;
+    margin: 0 auto;
+    width: auto;
+}
+.fudong_close_640 {
+    float: right;
+    height: 4.5726%;
+    margin-right: 0.994%;
+    width: 4.3738%;
+}
+.fudong_video_640 {
+    height: 95.4274%;
+    margin: 0 auto;
+    overflow: hidden;
+    width: auto;
+}
+/* black */
+#blackBg{display: none;position: absolute;top: 0%;left: 0%;width: 100%;height: 100%;background: #000;z-index:99;-moz-opacity: 0.7;opacity:.70;filter: alpha(opacity=70);}
+/* right float window */
+.floatWin{background:#fff;border:1px solid #cccccc;width:52px;height:119px;position:fixed;right:0px;top:400px;z-index:100;}
+.qqFloat a{display:block;background:url(http://city.hipiao.com/res/images/indexs/qqFloat.gif) no-repeat center 6px;height:17px;padding:38px 0px 4px;text-align:center;line-height:17px;}
+.qqFloat a:hover{background:url(http://city.hipiao.com/res/images/indexs/qqFloat1.gif) no-repeat center 6px;color:#a7cd1a;}
+.telFloat{background:url(http://city.hipiao.com/res/images/indexs/telFloat.gif) no-repeat center 6px;border-top:1px solid #cccccc;height:17px;padding:38px 0px 4px;text-align:center;line-height:17px;}
+.telHover{background:url(http://city.hipiao.com/res/images/indexs/telFloat1.gif) no-repeat center 6px;color:#a7cd1a;}
+.yjFloat{background:url(http://city.hipiao.com/res/images/indexs/yjFloat.gif) no-repeat center 6px;border-top:1px solid #cccccc;height:17px;padding:38px 0px 4px;text-align:center;line-height:17px;cursor:pointer;}
+.yjFloat:hover, .yjHover{background:url(http://city.hipiao.com/res/images/indexs/yjFloat1.gif) no-repeat center 6px;color:#a7cd1a;}
+.telImg{position:absolute;top:65px;right:55px;display:none;}
+.yjForm{background:#fff;border:1px solid #cccccc;width:432px;padding:24px 11px 30px;position:absolute;top:-50px;right:65px;z-index:100;display:none;}
+.yjForm .icon{background:url(http://city.hipiao.com/res/images/indexs/sjicon.png) no-repeat;width:10px;height:19px;position:absolute;top:175px;right:-10px;}
+.yjForm .fonts{border:1px solid #cccccc;width:420px;height:144px;padding:5px;line-height:20px;font-size:12px;}
+.yjForm .tel{margin-top:14px;}
+.yjForm .tel label{font-size:16px;color:#666666;height:34px;line-height:34px;}
+.yjForm .tel input{border:1px solid #ccc;width:220px;height:32px;}
+.yjForm .tj{text-align:right;margin-top:-34px;}
+.yjForm .tj img{cursor:pointer;}
+.div1{ background:#b2b0b1; width:119px; height:5px; position:relative;}
+.a_1{position:absolute; top:0; height:5px;left:0; background:#afd037;}
+.secAdd{height:120px;overflow:hidden;margin-bottom:35px;}
+
+
+@import url('basic.css');
+
+.film_tt{background: url(http://city.hipiao.com/res/images/film/icon1.gif) no-repeat 10px 5px;border-bottom: 1px solid #9f9f9f;height: 30px;line-height: 30px;font-size: 14px;padding-left: 68px;margin-bottom: 10px;}
+.film_tt span{display: inline-block;float: right;}
+.film_tt span a{margin-left: 20px;}
+.l_w{width: 670px;float: left;}
+.film_c1{margin-left: 5px;height: 1%;overflow: hidden;}
+.film_c1 dt{float: left;}
+.film_c1 dt img{display: block;width: 156px;height: 216px;}
+.film_c1 dd{width: 490px;height: 1%;float: right;line-height: 26px;}
+.film_c1 dd p{padding-left: 70px;height: 1%;overflow: hidden;}
+.film_c1 dd label{display: inline-block;width: 70px;margin-left: -70px;float: left;font-weight: 600;}
+.film_c1 dd span{display: inline-block;white-space: nowrap;margin-right: 5px;}
+.film_c1_1{font-size: 14px;margin-bottom: 5px;}
+.film_c1_2{color: #539300;}
+.film_c1_2 a{color: #539300;}
+.film_tt1{border-bottom: 1px solid #9f9f9f;height: 30px;line-height: 30px;font-size: 14px;padding: 0px 10px;margin: 20px 0px 10px;}
+.film_tt1 span{display: inline-block;float: right;}
+.film_c2{margin: 14px 9px 8px;}
+.film_c2 label{font-weight: 600;}
+.film_c2 a:hover{color: #539300;}
+.film_c3{margin: 0px 9px; line-height: 26px;}
+.film_c3 dt{font-weight: 600;}
+.film_c3 dd{padding-left: 76px;}
+.film_c3 dd label{display: inline-block;width: 76px;margin-left: -76px;float: left;}
+.film_c4{margin: 0px 9px 15px;line-height: 26px;}
+.film_c4 dd{padding-left: 145px;}
+.film_c4 dd label{display: inline-block;width: 145px;margin-left: -145px;float: left;}
+.film_c4 a{display: inline-block;white-space: nowrap;margin-right: 10px;}
+.film_c5{line-height: 28px;margin-bottom: 1px;margin-left: 9px;}
+.film_c5 dt{font-size: 14px;}
+.film_c5 dt a{text-decoration: underline;}
+.film_c6{line-height: 22px;margin: 0px 0px 20px 9px;}
+.film_c6 dt{font-weight: 600;}
+.film_c6 p{text-indent: 24px;}
+.film_table{margin: 5px 6px 0px 9px;}
+.film_table table{border-collapse: collapse;width: 100%;color: #707070;}
+.film_table td{padding: 5px 3px;text-align: center;line-height: 20px;border: 1px solid #E0E0E0;}
+.film_table th{border: 1px solid #E0E0E0;white-space: nowrap;font-weight: 400;color: #303030;}
+.film_table th p{background: #E5E5E5;border: 1px solid #ffffff;border-right: 1px solid #E5E5E5;padding: 5px 3px;text-align: center;line-height: 20px;}
+.film_a a{display: inline-block;background: url(http://city.hipiao.com/res/images/ciname/but-bg1.gif) no-repeat;width: 52px;height: 20px;line-height: 20px;text-align: center;color: #ffffff;margin: 0px auto;}
+.film_tt2{font-weight: 600;margin: 0px 17px 10px 9px;}
+.film_tt2 span{float: right;font-weight: 400;}
+.film_c7{width: 661px;margin: 0px 0px 0px 9px;}
+.film_c7 .tbg{background: url(http://city.hipiao.com/res/images/film/tbg1.gif) no-repeat;height: 6px;display: block;overflow: hidden;}
+.film_c7 .bbg{background: url(http://city.hipiao.com/res/images/film/bbg1.gif) no-repeat;height: 6px;display: block;overflow: hidden;}
+.film_c7_bor{border-left: 1px solid #CECECE;border-right: 1px solid #CECECE;width: 639px;padding: 5px 10px;overflow: hidden;}
+.film_c8{width: 1000px;}
+.film_c8 li{width: 198px;float: left;margin-right: 20px;}
+.film_c8 img{border: 1px solid #D1D1D1;margin-bottom: 5px;}
+.film_c8 span{display: inline-block;float: right;}
+.film_but1{text-align: right;margin-top: 12px;}
+.film_c9{width: 1000px;}
+.film_c9 li{min-width: 143px;float: left;margin-right: 8px;vertical-align: bottom;}
+.film_c9 img{border: 1px solid #D1D1D1;margin-bottom: 5px;}
+.r_w{width: 296px;float: right;}
+.r_c1{background: url(http://city.hipiao.com/res/images/ciname/bbg1.gif) no-repeat bottom;padding-bottom: 5px;}
+.r_c1_tt{background: url(http://city.hipiao.com/res/images/ciname/t-bg1.gif) no-repeat;height: 25px;padding: 8px 0px 0px 10px;}
+.r_c1_bor{border-left: 1px solid #D4D4D4;border-right: 1px solid #D4D4D4;padding: 10px 10px 1px;height: 1%;}
+.r_c1_1{border-bottom: 1px dashed #E0E0E0;padding-bottom: 12px;margin-bottom: 12px;height: 1%;overflow: hidden;}
+.r_c1_1 dt{float: left;}
+.r_c1_1 dt img{display: block;width: 115px;height: 160px;}
+.r_c1_1 dd{width: 150px;float: right;color: #707070;}
+.r_c1_1 dd h3{font-size: 14px;color: #303030;margin-bottom: 12px;}
+.r_c1_1 dd p{line-height: 22px;text-indent: 24px;}
+.e_l_close{float: right;}
+.dis1{margin-top: 20px;}
+/*********************3月3 日修改添加*************************/
+.l_w{width:674px;}
+.film_c1_2 a { text-decoration:underline;}
+.film_c1_2 span{color: #656565;}
+.film_zhu,.film_zhu0 {border-left:1px solid #E0E0E0; border-right:1px solid #E0E0E0; background-color:#FAFAFA;}
+.film_zhu0 {height:45px;}
+.film_tt0{margin-top:20px;}
+.film_tt1{border-bottom: 1px solid #D8D8D8;padding: 0px 10px;margin: 0 auto 10px 10px;width:631px;}
+/*.film_table {margin-bottom:5px;}*/
+
+.film_c2 {margin-top:0;}
+.film_c2 a {font-size:13px;color:#539300;}
+.film_c2 a.ttday01 {font-size:13px;color:#EB6100;font-weight:600;}
+
+.film_c4 {margin-top:0;}
+.film_c4 a {font-size:13px;color:#539300;}
+.film_c4 a.ttday01 {font-size:13px;color:#EB6100;font-weight:600;}
+
+.film_c4 dd {padding-left:125px;}
+.film_c4 dd label {width:125px;margin-left: -125px;}
+
+.film_c5 dt{font-size:15px;background:url(http://city.hipiao.com/res/images/film/icon3a.gif) 0 10px no-repeat;text-indent:10px; font-weight:600;}
+.film_c5 dt a {color:#539300;}
+.film_c5 dd {text-indent:10px;}
+.film_ge {heihgt:10px;border-top:1px dashed #DCDCDC;margin:20px 6px 12px 9px;}
+
+.film_c5 dd.hgzf{background: url(../images/hg.png) no-repeat 10px center;height:28px;line-height:28px;padding-left:46px;font-size:14px;margin-bottom:7px;}
+.film_c5 dd.hgzf a{color:#E6550E;text-decoration:underline;}
+
+/* 2013-1-29 zrl add */
+.cardTt{padding: 0px 0px 7px 0px;border-bottom: 1px solid #9F9F9F;font-size:24px;font-weight:600;font-family:'黑体';}
+.cardTt span{font-size:20px;color:#508712;}
+.cardNews p{font-size:14px;line-height:24px;}
+.cardNews label{color:#508712;font-weight:600;}
+.cardNews a{color:#508712;display:inline-block;margin-left:10px;font-weight:600;text-decoration:underline;}
+.fontSize12{font-size:12px;}
+.cardTable{margin-top:30px;}
+.cardTable .tt{padding: 0px 0px 10px 0px;border-bottom: 1px solid #508712;font-size:14px;font-weight:600;color:#508712;margin-bottom:15px;}
+.cardTable .tt span{font-size:12px;font-weight:400;color:#303030;}
+.cardTable .tt span a{color:#508712;font-weight:600;text-decoration:underline;}
+.tableList table{border-collapse: collapse;width: 100%;color: #707070;}
+.tableList td{padding: 5px 3px;text-align: center;line-height: 20px;border: 1px solid #E0E0E0;}
+.tableList th{border: 1px solid #E0E0E0;white-space: nowrap;font-weight: 400;color: #303030;}
+.tableList th p{background: #E5E5E5;border: 1px solid #ffffff;padding: 5px 3px;text-align: center;line-height: 20px;}
+.tableList td a{color:#508712;font-weight:600;text-decoration:underline;}
+/*2013-2-19 zrl add*/
+.filmBeginPadding{padding:0px 6px 1px 6px;}
+.filmBeginList{border-bottom:1px dashed #dcdcdc;margin-bottom:15px;}
+.filmName{height:35px;line-height:35px;}
+.filmName h1{font-family:'微软雅黑';font-size:16px;font-weight:600;color:#4f8f16;text-decoration:underline;float:left;margin-right:35px;}
+.filmName h1 a{color:#4f8f16;}
+.filmBuyTdq{display:inline-block;color:#fe6d00;text-decoration:underline;padding-top:2px;}
+.filmBeginTime label{width:50px;float:left;padding-top:5px;}
+.filmBeginTime label img{float:left;margin-left:6px;display:inline;}
+.filmBeginTime ul{width:590px;float:left;}
+.filmBeginTime li{width:53px;float:left;text-align:center;line-height:26px;white-space:nowrap;}
+
+
+
+.fudong_640{
+	width: 0;
+	height: 0;
+	background: #000000;
+	position: absolute;
+	border:1px solid #000000;
+	z-index:110;
+	}
+.fudong_title_640{
+	margin:0 auto;
+	width:auto;
+	height:4.5726%;
+	background:url(http://city.hipiao.com/res/images/fudong-bg.jpg) repeat-x;
+	}
+.fudong_close_640{
+	float:right; width:4.3738%; height:4.5726%; margin-right:0.994%;
+	}
+.fudong_video_640{
+	margin:0 auto;
+	width:auto;
+	height:95.4274%;
+	overflow:hidden;
+	}
+.fudong_480{
+	width: 0px;
+	height: 0px;
+	background: #000000;
+	position: absolute;
+	border:1px solid #000000;
+	z-index:110;
+	}
+.fudong_title_480{
+	margin:0 auto;
+	width:auto;
+	height:6%;
+	background:url(http://city.hipiao.com/res/images/fudong-bg.jpg) repeat-x;
+	}
+.fudong_close_480{
+	float:right; width:5.7441%; height:6%; margin-right:1.3055%;
+	}
+.fudong_video_480{
+	margin:0 auto;
+	width:auto;
+	height:94%;
+	overflow:hidden;
+	}
+
+.fudong_320{
+	width: 0px;
+	height: 0px;
+	background: #000000;
+	position: absolute;
+	border:1px solid #000000;
+
+	z-index:110;
+	}
+.fudong_title_320{
+	margin:0 auto;
+	width:auto;
+	height:8.7452%;
+	background:url(http://city.hipiao.com/res/images/fudong-bg.jpg) repeat-x;
+	}
+.fudong_close_320{
+	float:right; width:8.365%; height:8.7452%; margin-right:1.9011%;
+	}
+.fudong_video_320{
+	margin:0 auto;
+	width:auto;
+	height:91.2548%;
+	overflow:hidden;
+	}
+
+.pop-box {  
+			z-index: 6; /*这个数值要足够大，才能够显示在最上层*/ 
+            margin-bottom: 3px;  
+            display: none;  
+            position: absolute;  
+
+			background: url(http://city.hipiao.com/res/images/img-bg1.gif) repeat-x left top;
+			padding: 20px 10px 10px;
+			border: 1px solid #3D3D3D;
+			background-color:#000000;
+        }  
+		.pop-box span{
+			display: inline-block;
+			width: auto;
+			height: 1%;
+			position: relative;
+		}
+		.pop-box b{
+			display: block;
+			background: url(http://city.hipiao.com/res/images/close-bitton.gif) no-repeat;
+			width: 14px;
+			height: 14px;
+			position: absolute;
+			right: -5px;
+			top: -18px;
+			}
+
+
+
+
+/*棰勫憡鐗囨粴鍔ㄦ牱寮�*/
+#videoviwr {
+	width: 639px;
+	height:153px;
+	margin: 0 auto;
+	padding: 0px 0;
+	clear: both;
+	overflow:hidden;
+}
+#videoviwrFrame {
+	width: 1000px;
+	float: left;
+	padding: 0px 0;
+	clear: both;	
+}
+#videoviwrFrame span{
+	display: inline-block;
+	float: right;
+}
+#videoviwrFrame div{
+	width: 198px;
+	float: left;
+	margin-right:20px;
+}
+#videoviwrFrame div img{
+	width: 198px;
+	float: left;
+	margin-bottom:5px;
+}
+/*鍥剧墖婊氬姩鏍峰紡*/
+#viewer {
+	width: 612px;	
+	margin-left:8px;
+	padding: 0px 0;
+	clear: both;
+	overflow:hidden	
+}
+#viewerFrame {
+	width: 10000px;
+	float: left;
+	padding: 0px 0;
+	clear: both	
+}
+#viewerFrame div{
+	width: 143px;	
+	float: left;
+	margin:0 5px 0 5px
+}
+#viewerFrame div img {	
+	width:143px;
+	margin: 0 0px 0 0;
+	display: block;
+	border:1px solid #999;
+}
+
+
+.bank_nav02{
+	border-bottom: 1px solid #90C95E;
+	height: 32px;
+	padding-left: 4px;
+	margin-top: 15px;
+	position: relative;
+	margin-bottom:12px;
+	}
+.bank_nav02 ul{
+	position: absolute;
+	bottom: -1px;
+	}
+.bank_nav02 li{
+	background: url(http://city.hipiao.com/res/images//movie/btn_01.gif) no-repeat bottom;
+	width: 85px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	color: #707070;
+	font-weight: 600;
+	float: left;
+	margin-right: 2px;
+	cursor: pointer;
+	font-size:14px;
+	}
+.bank_nav02 li.hover{
+	background-position: top;
+	color: #539300;
+	}
+.f_l {text-align:left;}
+.f_r {text-align:right;}
+.l_gg {width:100%;height:271px;}
+.l_ggl {width:470px;height:271px;float:left;}
+.clickButton{_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://city.hipiao.com/res/images/movie/lh-bg.png',sizingMethod='scale');
+background: url(http://city.hipiao.com/res/images/movie/lh-bg.png) repeat-y right top !important;background: none;
+width:470px;height: 32px;padding-top: 10px;text-align: right;position:relative;top:-42px;z-index:2;}
+.clickButton a{display: inline-block;width: 22px;height: 16px;text-align: center;line-height: 16px;color: #ffffff;margin-right: 10px;}
+.clickButton a:visited{background: #ffffff;color: #000000;}
+.clickButton a.clickyuButton1 {background: #ffffff;color: #000000;}
+.l_ggr {width:185px;height:271px;float:right; line-height:23px;}
+.l_ggr dl a {color:#539300; text-decoration:underline;}
+.l_ggr h4{font-size: 14px;}
+.l_ggr .f_r a.but4 {margin-top:11px;}
+
+.mov_t {width:671px;overflow:hidden;margin-bottom:20px;}
+.mov_t div {height:1%;width:800px;}
+.mov_t ul {width:115px;float:left;margin-right:22px;margin-bottom:20px;}
+.mov_t li{margin-bottom:2px;color: #707070;}
+.mov_t li img{width: 115px;height: 160px;display: block;margin-bottom: 5px;}
+.mov_t li h3 {color:#000;margin-bottom: 2px;font-size: 12px;}
+.mov_t span {float:left;line-height:20px;}
+.mov_t dl {width:84px;display:inline-block; line-height:20px;float:right;}
+
+.r_c5{background: url(http://city.hipiao.com/res/images//movie/bbg10.gif) no-repeat center bottom;padding-bottom: 5px;margin-bottom:12px;}
+.r_c5_tt{background: url(http://city.hipiao.com/res/images//index/tbg1.gif) no-repeat;height: 26px;padding: 6px 0px 0px 11px;}
+.r_c5_dis{padding: 9px 9px 10px;border-left: 1px solid #D4D4D4;border-right: 1px solid #D4D4D4;}
+.r_c5_3{margin-top: 12px;height: 1%;}
+.r_c5_3 dt{float: left;}
+.r_c5_3 dt img{border: 1px solid #909090;display: block;}
+.r_c5_3 dd{width: 140px;height: 1%;float: right;line-height: 20px;color: #707070;}
+.r_c5_3 dd h3{font-size: 14px;color: #539300;border-bottom: 1px solid #9F9F9F;}
+.r_c5 ul {padding-top:10px;border-left: 1px solid #D4D4D4;border-right: 1px solid #D4D4D4;}
+.r_c5 ul li {padding-bottom:5px;display:inline-block;}
+.r_c5 li span {display:block;float:left;width:19px;height:19px;margin-left:9px;margin-right:9px;}
+span.n_1 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 0;}
+span.n_2 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -19px;}
+span.n_3 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -38px;}
+span.n_4 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -57px;}
+span.n_5 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -76px;}
+span.n_6 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -95px;}
+span.n_7 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -114px;}
+span.n_8 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -133px;}
+span.n_9 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -152px;}
+span.n_10 {background:url(http://city.hipiao.com/res/images//movie/doc10.gif) 0 -171px;}
+.r_c5 li {line-height:19px;}
+.r_c6 img{margin-bottom: 5px;}
+a.link_r {color:#303030; text-decoration:none;width:185px;height:19px;display:inline-block;overflow:hidden;line-height:19px;float:left;}
+a.link_r:hover { text-decoration:underline;}
+.but_15{
+	display: block;
+	background: url(http://city.hipiao.com/res/images//movie/but-bg15.gif) no-repeat;
+	width: 54px;
+	height: 17px;
+	font-size: 12px;
+	font-weight:normal;
+	color: #ffffff;
+	text-align: center;
+	line-height: 18px;
+	float:left;
+}
+.r_c5_h {width:100%;height:90px;display:inline-block;}
+.r_c5_h img {float:left;margin:6px 10px 10px 5px;}
+.r_c5_h p {line-height:22px;padding-top:3px;}
+.r_line2 {border-bottom:dashed 1px #999;}

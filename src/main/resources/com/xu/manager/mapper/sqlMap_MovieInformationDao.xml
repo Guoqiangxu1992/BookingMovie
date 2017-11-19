@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ycx.manager.dao.MovieInformationDao">
+
+	<select id="getMovieInformation" resultType="com.ycx.manager.bean.MovieInformation">
+		SELECT
+		m.ID AS ID,
+		m.ProductType AS productType,
+		m. NAME AS name,
+		m.Introduce AS introduce,
+		m.Remark AS remark,
+		m.MarketPrice AS marketPrice,
+		m.MemberPrice AS membersPrice,
+		m.Recommend AS recommed,
+		m.RecommendDate AS recommendDate,
+		m.status as status
+		FROM
+		t_movie_info m
+		<include refid="searchCondition"></include>
+		limit #{movieInfoDto.start},#{movieInfoDto.limit}
+
+	</select>
+
+
+	<select id="countGetMovieInformation" resultType="int">
+		SELECT count(1)
+		FROM
+		t_movie_info m
+		<include refid="searchCondition"></include>
+	</select>
+    
+    <sql id="searchCondition">
+	   <where>
+	   		<if test="movieInfoDto.status != null" >
+				 m.status =#{movieInfoDto.status}
+			</if>
+	   </where>
+	   </sql>
+
+    <insert id="insertMovieInformation"  useGeneratedKeys="true" keyProperty="ID">
+        insert into t_movie_info (ID,Name,ProductType,Introduce,Remark,MarketPrice,MemberPrice,Recommend,
+			RecommendDate,
+			status,
+			Tostar,
+			director
+			)
+			values(
+			#{movieInfo.ID},
+			#{movieInfo.name},
+			#{movieInfo.productType},
+			#{movieInfo.introduce},
+			#{movieInfo.remark},
+			#{movieInfo.marketPrice},
+			#{movieInfo.membersPrice},
+			#{movieInfo.recommed},
+			NOW(),
+			0,
+			#{movieInfo.tostar},
+			#{movieInfo.director}
+			)
+    </insert>
+    
+    <delete id="deletePictue">
+       delete from movie_picture where is_main = 1 and movie_id=#{pictureInformation.movieId}
+    </delete>
+    <insert id="savePictue">
+        insert into movie_picture (id,movie_id,url,create_time,original_name,is_main)
+			values(
+			#{pictureInformation.id},
+			#{pictureInformation.movieId},
+			#{pictureInformation.url},
+			NOW(),
+			#{pictureInformation.originalName},
+			#{pictureInformation.main}
+			)
+    </insert>
+    
+    <update id="publish">
+        update t_movie_info m set m.status = 1 where m.ID =  #{movieId}
+    </update>
+    
+    <select id="getMovieInfoById" resultType="com.ycx.manager.bean.MovieInformation">
+    	SELECT
+		m.ID AS ID,
+		m.ProductType AS productType,
+		m. NAME AS name,
+		m.Introduce AS introduce,
+		m.Remark AS remark,
+		m.MarketPrice AS marketPrice,
+		m.MemberPrice AS membersPrice,
+		m.Recommend AS recommed,
+		m.RecommendDate AS recommendDate,
+		m.status as status
+		FROM
+		t_movie_info m
+		where m.ID = #{movieId} 
+    </select>
+    
+    <update id="updateMovieInfo">
+        update t_movie_info m
+        set m.name=#{movieInfo.name},
+        m.ProductType=#{movieInfo.productType},
+        m.Introduce = #{movieInfo.introduce},
+        m.Remark =#{movieInfo.remark},
+		m.MarketPrice = #{movieInfo.marketPrice},
+		m.MemberPrice = #{movieInfo.membersPrice},
+		m.Recommend = #{movieInfo.recommed}
+        where m.ID = #{movieInfo.ID} 
+    </update>
+    
+    <insert id="DateMovie">
+    	insert into schedule_movie (id,movie_id,place_num,languag,date,marketPrice,memberPrice,number)
+			values(
+			#{scheduleMovie.id},
+			#{scheduleMovie.movieId},
+			#{scheduleMovie.placeNum},
+			#{scheduleMovie.languag},
+			#{scheduleMovie.date},
+			#{scheduleMovie.marketPrice},
+			#{scheduleMovie.memberPrice},
+			#{scheduleMovie.number}
+			)
+    
+    </insert>
+    
+    <select id="getScheduleDate" resultType="date">
+      select date from schedule_movie where movie_id = #{movieId}
+    </select>
+    
+    
+    <update id="undercarriage">
+        update t_movie_info m set m.status = 0 where m.ID =  #{movieId}
+    </update>
+    
+</mapper> 

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ycx.manager.dao.IndexDao">
+
+	<select id="getIndex" resultType="com.ycx.manager.bean.MovieIndex">
+		select id as ID,
+		name as name,
+		Introduce AS introduce
+		from t_movie_info
+		where status = 1
+	</select>
+
+
+	<select id="getMainUrl" resultType="string">
+		select url
+		from movie_picture
+		where movie_id=#{ID}
+		and is_main = 1
+	</select>
+
+	<select id="countPicture" resultType="int">
+		select count(1)
+		from
+		movie_picture
+		where movie_id=#{ID}
+		and is_main is null
+	</select>
+
+
+	<select id="getIndexDetail" resultType="com.ycx.manager.bean.MovieInformation">
+		SELECT
+		ID AS ID,
+		NAME AS
+		NAME,
+		ProductType as productType,
+		Introduce AS Introduce,
+		RecommendDate
+		AS RecommendDate,
+		director AS director,
+		Tostar AS tostar
+		FROM
+		t_movie_info
+		WHERE
+		STATUS = 1 AND ID=#{movieId}
+	</select>
+
+
+	<select id="getUrlList" resultType="string">
+		select url
+		from movie_picture
+		where movie_id=#{movieId}
+		and is_main is null
+	</select>
+
+	<select id="getscheduleMovieList" resultType="com.ycx.manager.bean.ScheduleMovie">
+		SELECT
+		id AS id,
+		movie_id AS movieId,
+		place_num AS placeNum,
+		languag AS languag,
+		date AS date,
+		marketPrice AS marketPrice,
+		memberPrice AS memberPrice,
+		number AS number
+		FROM
+		schedule_movie
+		where movie_id =#{movieId}
+	</select>
+
+
+	<select id="getscheduleMovie" resultType="com.ycx.manager.bean.ScheduleMovie">
+		SELECT
+		id AS id,
+		movie_id AS movieId,
+		place_num AS placeNum,
+		languag AS languag,
+		date AS date,
+		marketPrice AS marketPrice,
+		memberPrice AS memberPrice,
+		number AS number
+		FROM
+		schedule_movie
+		where id =#{id}
+	</select>
+
+	<insert id="saveOrder">
+		insert into t_order
+		(id,orderNumber,memberId,customerName,payment,createDate,movieId,movieName,
+		placeNum,
+		languag,
+		date,
+		orderNum
+		)
+		values(
+		#{order.id},
+		#{order.orderNumber},
+		#{order.memberId},
+		#{order.customerName},
+		#{order.payment},
+		NOW(),
+		#{order.movieId},
+		#{order.movieName},
+		#{order.placeNum},
+		#{order.languag},
+		#{order.date},
+		#{order.orderNum}
+		)
+	</insert>
+
+	<select id="getCustomerOrder" resultType="com.ycx.manager.bean.Order">
+		select
+		memberId ,
+		payment,
+		createDate,
+		status ,
+		orderNumber
+		movieId,
+		movieName,
+		orderNumber,
+		date,
+		placeNum,
+		languag,
+		orderNum
+		from t_order
+        where memberId=#{userId}
+	</select>
+    
+    <update id="payment">
+      update t_order set status = 1 where  orderNumber=#{id}
+    
+    </update>
+    
+    <update id="updateNum">
+      update schedule_movie set number = number-#{orderNum} where  id=#{id}
+    </update>
+    
+
+</mapper> 
