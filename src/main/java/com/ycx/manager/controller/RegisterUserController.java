@@ -54,12 +54,13 @@ public class RegisterUserController extends BaseController {
 	}
 	
 	@RequestMapping("/addBackendUser.do")
-	public void addBackendUser(LoginUser loginUser, Model model,HttpSession session) throws RuntimeException {
+	public ModelAndView addBackendUser(LoginUser loginUser, Model model,HttpSession session) throws RuntimeException {
 		loginUser.setPassword("ycx520");
 		loginUser.setMakeTime(new Date());
 		loginUser.setUserId(String.valueOf(System.currentTimeMillis()));
 		loginUser.setPassword(MD5Util.convertMD5(loginUser.getPassword()));
-		int result = accountService.addBackendUser(loginUser);
+		accountService.addBackendUser(loginUser);
+		return new ModelAndView("/system/user/user");
 	}
 	
 	
@@ -80,7 +81,7 @@ public class RegisterUserController extends BaseController {
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/loginUserList.do")
 	@ResponseBody
-	public String loginUserList(@Param("loginUserDto") LoginUserDto loginUserDto) {
+	public String loginUserList( LoginUserDto loginUserDto) {
 		JSONObject jsonResult = new JSONObject();
 		List<LoginUserDto> LoginUserDtoList = null;
 		if (loginUserDto != null) {
@@ -136,4 +137,27 @@ public class RegisterUserController extends BaseController {
 		}
 		return "";
 	}
+	
+	
+	
+	@RequestMapping("/editUserInfo.do")
+	public ModelAndView editUserInfo(Model model,HttpSession session) {
+		return new ModelAndView("/system/user/editUserInfo");
+	}
+	
+	
+	@RequestMapping("/updateUser.do")
+	public void updateUser(@Param("loginUserDto") LoginUserDto loginUserDto,HttpSession session) {
+		loginUserDto.setPassword(MD5Util.convertMD5(loginUserDto.getPassword()));
+		loginUserService.updateUser(loginUserDto);
+		LoginUser loginUser = (LoginUser) session.getAttribute("SESSION_LOGIN_USER");
+		loginUser.setEmail(loginUserDto.getEmail());
+		loginUser.setLoginName(loginUserDto.getLoginName());
+		loginUser.setName(loginUserDto.getName());
+		loginUser.setPassword(loginUserDto.getPassword());
+		session.setAttribute("SESSION_LOGIN_USER", loginUser);
+	}
+	
+	
+	
 }

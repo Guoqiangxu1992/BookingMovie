@@ -45,5 +45,7 @@ public interface LoginUserService {
 
 	public LoginUser findReceptionUserByUsername(String username);
 
+	public void updateUser(LoginUserDto loginUserDto);
+
 
 }

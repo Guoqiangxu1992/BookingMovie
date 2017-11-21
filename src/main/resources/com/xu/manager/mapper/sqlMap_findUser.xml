@@ -98,16 +98,7 @@
 		<if test="loginUserDto.roleId != null and loginUserDto.roleId!=''">
 			and ur.t_role_id =#{loginUserDto.roleId}#
 		</if>
-		<if test="loginUserDto.startTime != null and loginUserDto.startTime!=''">
-			 <![CDATA[ 
-				and u.make_time>=#{loginUserDto.startTime}
-				]]>
-		</if>
-		<if test="loginUserDto.endTime != null and loginUserDto.endTime !=''">
-			 <![CDATA[ 
-				and u.make_time<=#{loginUserDto.endTime}
-				]]>
-		</if>
+		
 	</sql>
 
 
@@ -119,6 +110,7 @@
 		c.id as userId,c.login_name,c.name,c.phone,c.email,c.make_time
 		FROM
 		t_customer c
+		<include refid="searchCustomerCondition"></include>
 		limit #{loginUserDto.start},#{loginUserDto.limit}
 	</select>
 	<!-- 根据名字查出登录者权限信息 -->
@@ -128,15 +120,31 @@
 		count(*)
 		FROM
 		t_customer c
-		<!-- <include refid="searchCustomerCondition"></include> -->
+		 <include refid="searchCustomerCondition"></include>
 	</select>
-
-
-	<!-- <sql id="searchCustomerCondition"> <if test="loginUserDto.loginName 
-		!= null and loginUserDto.loginName!=''"> and u.login_name like "%"#{loginUserDto.loginName}"%" 
-		</if> <if test="loginUserDto.roleId != null and loginUserDto.roleId!=''"> 
-		and ur.t_role_id =#{loginUserDto.roleId}# </if> <if test="loginUserDto.startTime 
-		!= null and loginUserDto.startTime!=''"> <![CDATA[ and u.make_time>=#{loginUserDto.startTime} 
-		]]> </if> <if test="loginUserDto.endTime != null and loginUserDto.endTime 
-		!=''"> <![CDATA[ and u.make_time<=#{loginUserDto.endTime} ]]> </if> </sql> -->
+     
+     <!-- 查询条件 -->
+	<sql id="searchCustomerCondition">
+	  <where>
+		<if test="loginUserDto.loginName != null and loginUserDto.loginName!=''">
+			 c.login_name like "%"#{loginUserDto.loginName}"%"
+		</if>
+		  </where>
+	</sql>
+	
+	
+	<update id="updateUser">
+	   update t_user u set  
+	   u.password = #{loginUserDto.password},
+	    u.login_name = #{loginUserDto.loginName},
+	     u.name = #{loginUserDto.name},
+	      u.email = #{loginUserDto.email},
+	      u.phone = #{loginUserDto.phone}
+	      where u.id = #{loginUserDto.userId}
+	
+	
+	
+	
+	</update>
+	
 </mapper> 

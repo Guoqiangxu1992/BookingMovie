@@ -17,7 +17,8 @@
 		o.originalPrice as originalPrice,
 		o.movieId as movieId,
 		o.movieName as movieName,
-		o.price as price
+		o.price as price,
+		o.orderNum as orderNum
 		FROM
 		t_order o
 		<include refid="searchCondition"></include>
@@ -35,8 +36,11 @@
     
     <sql id="searchCondition">
 	   <where>
-	   		<if test="orderDto.status != null" >
-				 m.status =#{orderDto.status}
+	   		<if test="orderDto.status != null and orderDto.status != ''" >
+				 o.status =#{orderDto.status}
+			</if>
+			<if test="orderDto.movieName != null and orderDto.movieName != ''" >
+				and o.movieName =#{orderDto.movieName}
 			</if>
 	   </where>
 	   </sql>

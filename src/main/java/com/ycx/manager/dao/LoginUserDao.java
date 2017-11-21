@@ -54,4 +54,6 @@ public interface LoginUserDao {
 
 	public LoginUser findReceptionUserByUsername(@Param("username")String username);
 
+	public void updateUser(@Param("loginUserDto")LoginUserDto loginUserDto);
+
 }

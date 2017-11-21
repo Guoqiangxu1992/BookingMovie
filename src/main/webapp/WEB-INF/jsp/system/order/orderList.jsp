@@ -45,14 +45,10 @@
 
 	
 	function search() {
-		//COMMON_PAGINATION.reset();
-		// var loginName = $('#carName').val().trim();
-		//var roleId = $('#variableBox option:selected') .val();
-		//var startTime = $('#startTime').val();
-		//var endTime = $('#endTime').val();
+		var status = $('#status option:selected') .val();
 		var param = {
-		// 'carInfoDto.carName': carName,
-		//'carInfoDto.variableBox' : variableBox
+				movieName: $('#name').val().trim(),
+				status: status
 		};
 		COMMON_PAGINATION.initParam(param);//@
 		var aj = $
@@ -104,7 +100,7 @@
 															+ '</p></td>';
 												}
 												html += '<td><p class="long_txt">'
-														+ value.orderNumber
+														+ value.orderNum
 														+ '</p></td>';
 												html += '<td><p class="long_txt">'
 															+ value.originalPrice
@@ -146,29 +142,20 @@
 					<form id="myForm" role="form" class="form-inline" method="post">
 						<input type="hidden" name="" value="" />
 						<div class="form-group">
-							<label for="title">汽车种类</label> <input type="text"
-								placeholder="汽车种类" name="carName" id="carName"
+							<label for="title">电影名称</label> <input type="text"
+								placeholder="电影名称" name="name" id="name"
 								class="form-control">
 						</div>
 						<div class="form-group">
-							<label for="approvestatus">变速箱</label> <select name="variableBox"
-								id="variableBox" class="form-control">
-								<option value="0">全部</option>
-								<option value="1">手动</option>
-								<option value="2">自动</option>
+							<label for="approvestatus">付款状态</label> <select name="status"
+								id="status" class="form-control">
+								<option value="">全部</option>
+								<option value="0">未付</option>
+								<option value="1">已付</option>
 							</select>
 						</div>
 
-						<div class="form-group date " style="width: 150px"
-							data-date="2012-12-21T15:25:00Z">
-							<label>注册日期开始于</label> <input type="text" size="16"
-								name="startTime" id="startTime" class="form-control form_date">
-						</div>
-						<div class="form-group date form_datetime-meridian"
-							style="width: 150px">
-							<label>注册日期结束于</label> <input type="text" size="16"
-								name="EndTime" id="endTime" class="form-control form_date">
-						</div>
+						
 						<button style="margin-top: 23px;" class="btn btn-success"
 							type="button" onclick="search()">查找</button>
 						<button style="margin-top: 23px;" class="btn btn-default"

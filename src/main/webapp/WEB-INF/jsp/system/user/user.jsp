@@ -129,34 +129,17 @@
 				}
 			console.log(param);
 			common.loadPage(url1, param);
+			$("#myModal_editrole_close").click();
 		}
 	function search() {
-		COMMON_PAGINATION.reset();
 		var loginName = $('#loginName').val().trim();
 		var roleId = $('#roleId option:selected').val();
-		var startTime = null;
-		var endTime = null;
-		var param =null;
 	
-		if($('#datetimepicker').val()!=''&&$('#datetimepicker').val()!=null){
-			  startTime = new Date($('#datetimepicker').val());
-		}
-		if($('#datetimepicker2').val()!=''&&$('#datetimepicker2').val()!=null){
-			var endTime = new Date($('#datetimepicker2').val());
-		}
-		if($('#datetimepicker2').val()!=''&&$('#datetimepicker2').val()!=null){
-			 param = {
-					'loginName':loginName,
-					'roleId':roleId,
-					'startTime':startTime,
-					'endTime':endTime
-				};
-		}else{
-			 param = {
-					'loginName':loginName,
-					'roleId':roleId
-				};
-		}
+		param = {
+					loginName:loginName,
+					roleId:roleId
+		};
+		console.log(param);
 	
 		COMMON_PAGINATION.initParam(param);//@
 		var aj = $
@@ -245,21 +228,13 @@
 						<div class="form-group">
 							<label for="approvestatus">用户角色</label>
 							 <select placeholder="用户角色" name="roleId" id="roleId"class="form-control">
-							 <option value="0">全部</option>
-								<option value="1">管理员</option>
-								<option value="2">普通用户</option>
+							 <option value="">全部</option>
+								<option value="2">管理员</option>
+								<option value="1">普通用户</option>
 							</select>
 						</div>
 
-						<div class="form-group date " style="width: 150px">
-							<label>注册日期开始于</label><input class="form-control" type="text"
-								id="datetimepicker">
-						</div>
-						<div class="form-group date " style="width: 150px">
-							<label>注册结束 </label><input class="form-control" type="text"
-								id="datetimepicker2">
-						</div>
-
+						
 						<button style="margin-top: 23px;" class="btn btn-success"
 							type="button" onclick="search()">查找</button>
 						<button style="margin-top: 23px;" class="btn btn-default"

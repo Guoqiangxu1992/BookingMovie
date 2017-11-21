@@ -93,4 +93,9 @@ public class LoginUserServiceImpl implements LoginUserService {
 		return userInfo;
 	}
 
+	@Override
+	public void updateUser(LoginUserDto loginUserDto) {
+		loginUserDao.updateUser(loginUserDto);
+	}
+
 }
