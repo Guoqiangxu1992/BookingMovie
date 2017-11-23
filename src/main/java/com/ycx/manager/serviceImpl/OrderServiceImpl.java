@@ -1,11 +1,13 @@
 package com.ycx.manager.serviceImpl;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.ycx.manager.ClassUtil.DateUtil;
 import com.ycx.manager.Dto.OrderDto;
 import com.ycx.manager.bean.Order;
 import com.ycx.manager.bean.Pagination;
@@ -28,9 +30,15 @@ public class OrderServiceImpl  implements OrderService{
 		List<Order> list = new ArrayList<Order>();
 		int count = orderDao.countOrderList(orderDto);
 		list = orderDao.getOrderList(orderDto);
+		
 		Pagination pageination = new Pagination();
 		if(count<=0){
 			return pageination;
+		}else{
+			for(Order order :list){
+				 SimpleDateFormat sdf =   new SimpleDateFormat( "  yyyy-MM-dd " );
+				order.setTimeStr(sdf.format(order.getCreateDate()));
+			}
 		}
 		pageination.setTotalCount(count);
 		pageination.setResultList(list);

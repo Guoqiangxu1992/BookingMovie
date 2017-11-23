@@ -1,4 +1,4 @@
-package com.ycx.manager.controller;
+package com.ycx.manager.ClassUtil;
 import java.security.MessageDigest;
 
 /** 

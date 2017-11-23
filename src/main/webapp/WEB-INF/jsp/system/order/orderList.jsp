@@ -59,6 +59,7 @@
 					data : param,
 					success : function(data) {
 						var str = eval(data);
+						console.log(str);
 						if (str != '') {
 							$("#taskResult").empty();
 							$

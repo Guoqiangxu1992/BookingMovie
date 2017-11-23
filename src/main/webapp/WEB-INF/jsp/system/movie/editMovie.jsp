@@ -102,7 +102,7 @@
 							<label class="col-sm-2 col-sm-2 control-label"><b>内容</b></label>
 							<div class="col-sm-10">
 								<script id="editor_content" type="text/plain"
-									style="width: 90%; height: 300px;">
+									style="width: 90%; height: 300px;" value="${movieInformation.introduce}>
 											</script>
 							</div>
 						</div>

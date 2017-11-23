@@ -23,7 +23,9 @@
 		common.submitForm2Path('carInfoform', url);
 		return;
 	}
-
+	
+	var password = com.ycx.manager.ClassUtil.convertMD5(SESSION_LOGIN_USER.password); 
+	 document.gerElementById('password').value=password;
 	function goBack() {
 		var base = ' ${xgq }/movie/getMovieInformation.do';
 		var param = {

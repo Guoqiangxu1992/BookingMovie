@@ -139,39 +139,7 @@
 						onclick="goUp(this);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
 					</span>
 				</header>
-				<div class="panel-body" style="display: none;">
-					<form id="myForm" role="form" class="form-inline" method="post">
-						<input type="hidden" name="" value="" />
-						<div class="form-group">
-							<label for="title">汽车种类</label> <input type="text"
-								placeholder="汽车种类" name="carName" id="carName"
-								class="form-control">
-						</div>
-						<div class="form-group">
-							<label for="approvestatus">变速箱</label> <select name="variableBox"
-								id="variableBox" class="form-control">
-								<option value="0">全部</option>
-								<option value="1">手动</option>
-								<option value="2">自动</option>
-							</select>
-						</div>
-
-						<div class="form-group date " style="width: 150px"
-							data-date="2012-12-21T15:25:00Z">
-							<label>注册日期开始于</label> <input type="text" size="16"
-								name="startTime" id="startTime" class="form-control form_date">
-						</div>
-						<div class="form-group date form_datetime-meridian"
-							style="width: 150px">
-							<label>注册日期结束于</label> <input type="text" size="16"
-								name="EndTime" id="endTime" class="form-control form_date">
-						</div>
-						<button style="margin-top: 23px;" class="btn btn-success"
-							type="button" onclick="search()">查找</button>
-						<button style="margin-top: 23px;" class="btn btn-default"
-							type="button" onclick="reset()">重置</button>
-					</form>
-				</div>
+				
 
 
 				<table class="table table-striped table-advance table-hover">

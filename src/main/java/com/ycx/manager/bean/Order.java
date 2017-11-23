@@ -29,6 +29,7 @@ public class Order {
 	private Double  marketPrice;
 	private Double memberPrice;
 	private int orderNum;
+	private String timeStr;
 	
 	public String getId() {
 		return id;
@@ -113,6 +114,12 @@ public class Order {
 	}
 	public void setLanguag(String languag) {
 		this.languag = languag;
+	}
+	public String getTimeStr() {
+		return timeStr;
+	}
+	public void setTimeStr(String timeStr) {
+		this.timeStr = timeStr;
 	}
 	public Date getDate() {
 		return date;

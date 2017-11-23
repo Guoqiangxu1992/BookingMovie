@@ -34,7 +34,6 @@
 	             dataType: "json",
 	             success: function(data){
 	            	 if(data==1){
-	            		 alert("${xgq}/login/tologin.do");
 	            		 window.location = "${xgq}/login/tologin.do";
 	            	 }else
 	            		 {

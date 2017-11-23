@@ -85,6 +85,7 @@ element.style {
 			<ul>
 				<li class="hover"><a href="${xgq}/index/getMovieIndex.do">首页</a></li>
 				<li><a href="${xgq}/index/getMovieIndex.do">电影</a></li>
+				<li><a href="${xgq}/index/getCustomerOrder.do" class="hover">我的订单</a></li>
 
 			</ul>
 		</div>
@@ -98,9 +99,9 @@ element.style {
 					</div>
 				</c:when>
 				<c:otherwise>
-					<input type="text" disabled="disabled" name="isLogin" id="isLogin"
-						value="1">
-						<p>欢迎！${SESSION_LOGIN_USER.loginName}登录。${isLogin}</p>
+					
+						<p style="color:red;">欢迎！${SESSION_LOGIN_USER.loginName}登录。${isLogin}</p>
+						
 				</c:otherwise>
 			</c:choose>
 		</div>

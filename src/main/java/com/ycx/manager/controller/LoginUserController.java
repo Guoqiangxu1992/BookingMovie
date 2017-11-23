@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ycx.manager.ClassUtil.MD5Util;
 import com.ycx.manager.bean.LoginUser;
 import com.ycx.manager.framework.SessionBagImpl;
 import com.ycx.manager.framework.XgqSessionBag;

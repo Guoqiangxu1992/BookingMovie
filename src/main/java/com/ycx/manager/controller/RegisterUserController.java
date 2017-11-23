@@ -17,6 +17,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.ycx.manager.ClassUtil.MD5Util;
 import com.ycx.manager.Dto.LoginUserDto;
 import com.ycx.manager.bean.LoginUser;
 import com.ycx.manager.bean.Pagination;
@@ -148,9 +150,15 @@ public class RegisterUserController extends BaseController {
 	
 	@RequestMapping("/updateUser.do")
 	public void updateUser(@Param("loginUserDto") LoginUserDto loginUserDto,HttpSession session) {
-		loginUserDto.setPassword(MD5Util.convertMD5(loginUserDto.getPassword()));
-		loginUserService.updateUser(loginUserDto);
 		LoginUser loginUser = (LoginUser) session.getAttribute("SESSION_LOGIN_USER");
+		if(loginUser.getPassword().equals(loginUserDto.getPassword())){
+			
+		}else{
+			loginUserDto.setPassword(MD5Util.convertMD5(loginUserDto.getPassword()));
+		}
+		
+		loginUserService.updateUser(loginUserDto);
+		
 		loginUser.setEmail(loginUserDto.getEmail());
 		loginUser.setLoginName(loginUserDto.getLoginName());
 		loginUser.setName(loginUserDto.getName());

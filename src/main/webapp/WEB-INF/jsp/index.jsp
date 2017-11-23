@@ -27,6 +27,7 @@
 		<div class="nav">
 			<ul>
 				<li class="hover"><a >首页</a></li>
+				<li class="hover"><a href="${xgq}/index/getCustomerOrder.do" class="hover">我的订单</a></li>
 
 			</ul>
 		</div>
@@ -42,6 +43,7 @@
 				</c:when>
 				<c:otherwise>
 					<p>欢迎！${SESSION_LOGIN_USER.loginName}登录。</p>
+					
 				</c:otherwise>
 			</c:choose>
 		</div>

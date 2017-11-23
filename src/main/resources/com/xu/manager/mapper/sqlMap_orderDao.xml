@@ -21,7 +21,10 @@
 		o.orderNum as orderNum
 		FROM
 		t_order o
+		
 		<include refid="searchCondition"></include>
+		ORDER BY
+	    createDate DESC
 		limit #{orderDto.start},#{orderDto.limit}
 
 	</select>
