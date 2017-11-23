@@ -95,10 +95,14 @@
 													html += '<td><p class="long_txt" style="color:green;">'
 															+ '待付款'
 															+ '</p></td>';
-												} else {
+												} else if(value.status==1) {
 													html += '<td><p class="long_txt" style="color:red;">'
 															+ '已付款'
 															+ '</p></td>';
+												}else{
+													html += '<td><p class="long_txt" style="color:green;">'
+														+ '已失效'
+														+ '</p></td>';
 												}
 												html += '<td><p class="long_txt">'
 														+ value.orderNum
@@ -153,6 +157,7 @@
 								<option value="">全部</option>
 								<option value="0">未付</option>
 								<option value="1">已付</option>
+								<option value="2">已失效</option>
 							</select>
 						</div>
 

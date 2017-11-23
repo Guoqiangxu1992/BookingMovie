@@ -18,7 +18,8 @@
 		o.movieId as movieId,
 		o.movieName as movieName,
 		o.price as price,
-		o.orderNum as orderNum
+		o.orderNum as orderNum,
+		o.scheduleMovieId as scheduleMovieId
 		FROM
 		t_order o
 		
@@ -110,4 +111,9 @@
     </update>
     
      -->
+     
+     
+      <update id="cancelOrder">
+        update t_order o set o.status = 2 where o.id =  #{id}
+    </update>
 </mapper> 

@@ -93,6 +93,7 @@ public class IndexController {
 			//生成订单
 			LoginUser loginUser = (LoginUser) session.getAttribute("SESSION_LOGIN_USER");
 			Order order = new Order();
+			order.setScheduleMovieId(String.valueOf(scheduleMovie.getId()));
 			order.setCreateDate(new Date());
 			order.setCustomerName(loginUser.getLoginName());
 			order.setId(String.valueOf(System.currentTimeMillis()));

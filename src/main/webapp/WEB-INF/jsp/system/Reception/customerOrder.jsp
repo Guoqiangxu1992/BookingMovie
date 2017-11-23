@@ -187,6 +187,9 @@ element.style {
 											<c:when test="${item['status'] == '1'}">
 												<td>已付款</td>
 											</c:when>
+											<c:when test="${item['status'] == '2'}">
+												<td>已失效</td>
+											</c:when>
 											<c:otherwise>
 												<td class="film_a"><a href="javascript:void(0)"
 													onclick="payment(${item['orderNumber']})" target="_blank" style="color:red;">付款</a></td>

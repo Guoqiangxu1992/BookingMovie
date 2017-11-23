@@ -75,6 +75,7 @@ public class MovieController {
 			String editorValue = request.getParameter("editorValue");
 			Long id = System.currentTimeMillis();
 			movieInfo.setID(id.toString());
+			movieInfo.setRecommed(1);
 			movieInfo.setIntroduce(editorValue);
 			LoginUser loginUser = (LoginUser) session.getAttribute("SESSION_LOGIN_USER");
 			movieInfo.setOperator(loginUser.getLoginName());

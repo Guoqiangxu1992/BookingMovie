@@ -134,5 +134,9 @@
       update schedule_movie set number = number-#{orderNum} where  id=#{id}
     </update>
     
+    
+    <update id="updateCancelNum">
+      update schedule_movie set number = number+#{orderNum} where  id=#{id}
+    </update>
 
 </mapper> 

@@ -12,4 +12,6 @@ public interface OrderService {
 
 	Pagination getOrderList(OrderDto orderDto);
 
+	void cancelOrder(String id, int orderNum, String string);
+
 }

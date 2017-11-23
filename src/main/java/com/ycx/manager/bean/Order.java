@@ -30,6 +30,7 @@ public class Order {
 	private Double memberPrice;
 	private int orderNum;
 	private String timeStr;
+	private String scheduleMovieId;
 	
 	public String getId() {
 		return id;
@@ -114,6 +115,12 @@ public class Order {
 	}
 	public void setLanguag(String languag) {
 		this.languag = languag;
+	}
+	public String getScheduleMovieId() {
+		return scheduleMovieId;
+	}
+	public void setScheduleMovieId(String scheduleMovieId) {
+		this.scheduleMovieId = scheduleMovieId;
 	}
 	public String getTimeStr() {
 		return timeStr;

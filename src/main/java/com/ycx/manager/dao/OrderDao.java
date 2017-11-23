@@ -18,4 +18,6 @@ public interface OrderDao {
 
 	List<Order> getOrderList(@Param("orderDto")OrderDto orderDto);
 
+	void cancelOrder(@Param("id")String id, @Param("orderNum")int orderNum);
+
 }

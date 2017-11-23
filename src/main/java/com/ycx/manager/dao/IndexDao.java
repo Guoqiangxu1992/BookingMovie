@@ -38,4 +38,6 @@ public interface IndexDao {
 
 	void updateNum(@Param("id")Long id,@Param("orderNum") Integer orderNum);
 
+	void updateCancelNum(@Param("id")String id,@Param("orderNum") int orderNum);
+
 }
