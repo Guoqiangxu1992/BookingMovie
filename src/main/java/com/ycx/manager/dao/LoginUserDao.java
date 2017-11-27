@@ -56,4 +56,6 @@ public interface LoginUserDao {
 
 	public void updateUser(@Param("loginUserDto")LoginUserDto loginUserDto);
 
+	public void deleteUser(@Param("loginUserDto")LoginUserDto loginUserDto);
+
 }

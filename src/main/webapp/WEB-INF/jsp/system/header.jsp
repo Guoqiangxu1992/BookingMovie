@@ -185,7 +185,7 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                            <!--  <img alt="" src="images/yangchunxue.jpg"> -->
-                            <span class="username">Jhon Doue</span>
+                            <span class="username">Chunxue Yang</span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">

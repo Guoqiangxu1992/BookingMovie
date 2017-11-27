@@ -89,7 +89,7 @@
 		placeNum,
 		languag,
 		date,
-		orderNum
+		orderNum,price
 		)
 		values(
 		#{order.id},
@@ -103,7 +103,8 @@
 		#{order.placeNum},
 		#{order.languag},
 		#{order.date},
-		#{order.orderNum}
+		#{order.orderNum},
+		#{order.price}
 		)
 	</insert>
 
@@ -120,7 +121,8 @@
 		date,
 		placeNum,
 		languag,
-		orderNum
+		orderNum,
+		price as memberPrice
 		from t_order
         where memberId=#{userId}
 	</select>

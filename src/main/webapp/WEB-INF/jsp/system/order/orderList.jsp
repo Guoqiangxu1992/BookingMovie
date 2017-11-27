@@ -108,11 +108,11 @@
 														+ value.orderNum
 														+ '</p></td>';
 												html += '<td><p class="long_txt">'
-															+ value.originalPrice
-															+ '</p></td>';
-												html += '<td><p class="long_txt">'
 																+ value.price
-																+ '</p></td>';	
+																+ '</p></td>';
+												html += '<td><p class="long_txt">'
+																	+ value.payment
+																	+ '</p></td>';				
 												html += '<td><p class="long_txt">'
 																+ value.movieId
 																+ '</p></td>';
@@ -181,8 +181,8 @@
 							<th><i class="icon-bookmark"></i>下单日期</th>
 							<th><i class="icon-bookmark"></i>下单状态</th>
 							<th><i class="icon-bookmark"></i>下单数量</th>
-							<th><i class="icon-bookmark"></i>原价</th>
 							<th><i class="icon-bookmark"></i>会员价</th>
+							<th><i class="icon-bookmark"></i>总价</th>
 							<th><i class="icon-edit"></i>电影ID</th>
 							<th><i class="icon-edit"></i>电影名称</th>
 						</tr>

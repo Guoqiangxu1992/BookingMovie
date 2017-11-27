@@ -20,14 +20,18 @@
 	<select id="findUserByUsername" parameterType="String"
 		resultMap="LoginUserMap">
 
-		SELECT c.id as userId,c.login_name,c.name,c.phone,c.email,c.make_time,c.password as password from t_user c WHERE login_name = #{username}
+		SELECT c.id as
+		userId,c.login_name,c.name,c.phone,c.email,c.make_time,c.password as
+		password from t_user c WHERE login_name = #{username}
 	</select>
-	
+
 	<!-- 根据名字查出登录者基础信息 -->
 	<select id="findReceptionUserByUsername" parameterType="String"
 		resultMap="LoginUserMap">
 
-		SELECT c.id as userId,c.login_name,c.name,c.phone,c.email,c.make_time,c.password as password from t_customer c WHERE login_name = #{username}
+		SELECT c.id as
+		userId,c.login_name,c.name,c.phone,c.email,c.make_time,c.password as
+		password from t_customer c WHERE login_name = #{username}
 	</select>
 
 	<!-- 根据名字查出登录者脚色信息 -->
@@ -54,7 +58,8 @@
 		u.id = ur.t_user_id
 		AND ur.t_role_id = r.id
 		AND r.id = rp.t_role_id
-		AND rp.t_permission_id = p.id and login_name = #{username}
+		AND rp.t_permission_id =
+		p.id and login_name = #{username}
 	</select>
 
 
@@ -62,7 +67,8 @@
 	<select id="queryList" parameterType="com.ycx.manager.Dto.LoginUserDto"
 		resultMap="LoginUserMap">
 		SELECT
-		u.id as userId,u.login_name,u.name,u.phone,u.email,u.make_time,ur.t_role_id
+		u.id as
+		userId,u.login_name,u.name,u.phone,u.email,u.make_time,ur.t_role_id
 		role_id
 		FROM
 		t_user u,
@@ -84,7 +90,8 @@
 		t_user_role ur,
 		t_role r
 		where
-		u.id = ur.t_user_id
+		u.id =
+		ur.t_user_id
 		AND ur.t_role_id = r.id
 		<include refid="searchCondition"></include>
 	</select>
@@ -98,7 +105,7 @@
 		<if test="loginUserDto.roleId != null and loginUserDto.roleId!=''">
 			and ur.t_role_id =#{loginUserDto.roleId}#
 		</if>
-		
+
 	</sql>
 
 
@@ -120,31 +127,33 @@
 		count(*)
 		FROM
 		t_customer c
-		 <include refid="searchCustomerCondition"></include>
+		<include refid="searchCustomerCondition"></include>
 	</select>
-     
-     <!-- 查询条件 -->
+
+	<!-- 查询条件 -->
 	<sql id="searchCustomerCondition">
-	  <where>
-		<if test="loginUserDto.loginName != null and loginUserDto.loginName!=''">
-			 c.login_name like "%"#{loginUserDto.loginName}"%"
-		</if>
-		  </where>
+		<where>
+			<if test="loginUserDto.loginName != null and loginUserDto.loginName!=''">
+				c.login_name like "%"#{loginUserDto.loginName}"%"
+			</if>
+		</where>
 	</sql>
-	
-	
+
+
 	<update id="updateUser">
-	   update t_user u set  
-	   u.password = #{loginUserDto.password},
-	    u.login_name = #{loginUserDto.loginName},
-	     u.name = #{loginUserDto.name},
-	      u.email = #{loginUserDto.email},
-	      u.phone = #{loginUserDto.phone}
-	      where u.id = #{loginUserDto.userId}
-	
-	
-	
-	
+		update t_user u set
+		u.password = #{loginUserDto.password},
+		u.login_name = #{loginUserDto.loginName},
+		u.name = #{loginUserDto.name},
+		u.email = #{loginUserDto.email},
+		u.phone = #{loginUserDto.phone}
+		where u.id = #{loginUserDto.userId}
+
 	</update>
-	
+
+	<delete id="deleteUser">
+		delete from t_user 
+		where id = #{loginUserDto.userId}
+	</delete>
+
 </mapper> 

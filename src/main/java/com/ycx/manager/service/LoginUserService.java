@@ -47,5 +47,7 @@ public interface LoginUserService {
 
 	public void updateUser(LoginUserDto loginUserDto);
 
+	public void deleteUser(LoginUserDto loginUserDto);
+
 
 }

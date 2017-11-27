@@ -55,7 +55,7 @@
     <body oncontextmenu="return false">
 
         <div class="page-container">
-            <h1>Login</h1>
+            <h1>湖北第二师范学院电影订票系统--by杨春雪</h1>
             <form action="${xgq}/login/l.do" method="post" id="loginForm">
 				<div>
 					<input type="text" id="username" class="username" placeholder="Username" autocomplete="true"/>
@@ -64,7 +64,7 @@
 					<input type="password" id="password" class="password" placeholder="Password"  oncontextmenu="return false" onpaste="return false" />
                 </div>
                     <div style="float:left">
-                    		<button id="submit" type="button" >登录2</button>
+                    		<button id="submit" type="button" >登录</button>
                     </div>         
                 	 <div style="float:left">
                     		<button id="regist" type="button" >注册</button>
@@ -72,7 +72,10 @@
                 	
                 
             </form>
-            <div class="connect">
+            <div class="connect" style="
+    margin-left: 1600px;
+    margin-top: 300px;
+            ">
                 <p>If we can only encounter each other rather than stay with each other,then I wish we had never encountered.</p>
 				<p style="margin-top:20px;">如果只是遇见，不能停留，不如不遇见。</p>
             </div>

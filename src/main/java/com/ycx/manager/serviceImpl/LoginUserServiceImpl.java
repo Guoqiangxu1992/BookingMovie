@@ -98,4 +98,10 @@ public class LoginUserServiceImpl implements LoginUserService {
 		loginUserDao.updateUser(loginUserDto);
 	}
 
+	@Override
+	public void deleteUser(LoginUserDto loginUserDto) {
+		loginUserDao.deleteUser(loginUserDto);
+		
+	}
+
 }

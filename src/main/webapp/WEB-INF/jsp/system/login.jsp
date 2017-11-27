@@ -78,9 +78,9 @@
                 	
                 
             </form>
-            <div class="connect">
+            <div class="connect" >
                 <p>If we can only encounter each other rather than stay with each other,then I wish we had never encountered.</p>
-				<p style="margin-top:20px;">如果只是遇见，不能停留，不如不遇见。</p>
+				<p style="margin-top:20px;">如果只是遇见，不能停留，不如不遇见1。</p>
             </div>
         </div>
 		<div class="alert" style="display:none">

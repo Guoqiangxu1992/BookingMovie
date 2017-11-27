@@ -99,11 +99,12 @@ public class IndexController {
 			order.setId(String.valueOf(System.currentTimeMillis()));
 			order.setMemberId(loginUser.getUserId());
 			order.setMovieId(movieId.toString());
+			order.setPrice(scheduleMovie.getMemberPrice());
 			order.setMovieName(movieInformation.getName());
 			order.setPlaceNum(scheduleMovie.getPlaceNum());
 			order.setLanguag(scheduleMovie.getLanguag());
 			order.setDate(scheduleMovie.getDate());
-			order.setPayment(scheduleMovie.getMemberPrice());
+			order.setPayment(orderNum*scheduleMovie.getMemberPrice());
 			order.setOrderNumber(System.currentTimeMillis());
 			order.setOrderNum(orderNum);
 			indexService.saveOrder(order);

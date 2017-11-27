@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>欢迎来我家</title>
+	<title>湖北第二师范订票系统-杨春雪</title>
 	<%@include file="taglib.jsp"%>
     <%@include file="css.jsp"%>
 	

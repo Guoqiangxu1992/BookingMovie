@@ -26,10 +26,7 @@
 
 	function goBack() {
 		var base = ' ${xgq }/movie/getMovieInformation.do';
-		var param = {
-		//carId:carId
-		}
-		common.loadPage(base, param);
+		submitform(base);
 	}
 </script>
 

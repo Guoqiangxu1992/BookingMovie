@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ycx.manager.ClassUtil.DateUtil;
 import com.ycx.manager.ClassUtil.MD5Util;
 import com.ycx.manager.Dto.LoginUserDto;
 import com.ycx.manager.bean.LoginUser;
@@ -44,7 +45,7 @@ public class RegisterUserController extends BaseController {
 	@RequestMapping("/register.do")
 	@ResponseBody
 	public int userRegister(LoginUser loginUser, Model model,HttpSession session) throws RuntimeException {
-		loginUser.setUserId(String.valueOf(System.currentTimeMillis()));
+		loginUser.setUserId(DateUtil.getCurrentDateTimeStr2());
 		loginUser.setPassword(MD5Util.convertMD5(loginUser.getPassword()));
 		int result = accountService.saveUser(loginUser);
 		session.setAttribute("SESSION_LOGIN_USER", loginUser);
@@ -57,9 +58,9 @@ public class RegisterUserController extends BaseController {
 	
 	@RequestMapping("/addBackendUser.do")
 	public ModelAndView addBackendUser(LoginUser loginUser, Model model,HttpSession session) throws RuntimeException {
-		loginUser.setPassword("ycx520");
+		loginUser.setPassword("yang950202");
 		loginUser.setMakeTime(new Date());
-		loginUser.setUserId(String.valueOf(System.currentTimeMillis()));
+		loginUser.setUserId(DateUtil.getCurrentDateTimeStr2());
 		loginUser.setPassword(MD5Util.convertMD5(loginUser.getPassword()));
 		accountService.addBackendUser(loginUser);
 		return new ModelAndView("/system/user/user");
@@ -151,7 +152,7 @@ public class RegisterUserController extends BaseController {
 	@RequestMapping("/updateUser.do")
 	public void updateUser(@Param("loginUserDto") LoginUserDto loginUserDto,HttpSession session) {
 		LoginUser loginUser = (LoginUser) session.getAttribute("SESSION_LOGIN_USER");
-		if(loginUser.getPassword().equals(loginUserDto.getPassword())){
+		if(MD5Util.convertMD5(loginUser.getPassword()).equals(MD5Util.convertMD5(loginUserDto.getPassword()))){
 			
 		}else{
 			loginUserDto.setPassword(MD5Util.convertMD5(loginUserDto.getPassword()));
@@ -165,6 +166,14 @@ public class RegisterUserController extends BaseController {
 		loginUser.setPassword(loginUserDto.getPassword());
 		session.setAttribute("SESSION_LOGIN_USER", loginUser);
 	}
+	
+	@RequestMapping("/deleteUser.do")
+	public ModelAndView deleteUser(@Param("loginUserDto") LoginUserDto loginUserDto,HttpSession session) {
+		loginUserService.deleteUser(loginUserDto);
+		return new ModelAndView("/system/user/user");
+	}
+	
+	
 	
 	
 	

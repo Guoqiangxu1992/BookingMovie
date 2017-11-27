@@ -104,18 +104,16 @@
 			}
 		})
 	}
-	/* $(function(){
-	 $(".form_date").datepicker({
-	 format: "yyyy-mm",
-	 weekStart:1,
-	 startView:3,
-	 minView:3,
-	 forceParse:false,
-	 lanague:'zh-cn',
-	 autoclose: true,
-	 });
 	
-	 }); */
+	 
+	 function deleteUser(userId){
+		 var url1 = " ${xgq}/user/deleteUser.do";
+			
+			var param = {
+					userId : userId
+				}
+			common.loadPage(url1, param);
+	 }
 	 
 	 function addBackendUser() {
 			var url1 = " ${xgq}/user/addBackendUser.do";
@@ -130,7 +128,11 @@
 			console.log(param);
 			common.loadPage(url1, param);
 			$("#myModal_editrole_close").click();
+			window.location.reload();
 		}
+	 
+	 
+	 
 	function search() {
 		var loginName = $('#loginName').val().trim();
 		var roleId = $('#roleId option:selected').val();
@@ -185,7 +187,7 @@
 												html += '<td><p class="long_txt">'
 														+formartDate("yyyy-MM-dd HH:mm:ss",
 																value.makeTime.time) + '</p></td>';
-												html += '<td><button class="btn btn-primary btn-xs"onclick="editArticle(${p.id});"><i class="icon-edit" title="编辑">编辑</i></button></td>';
+												html += '<td><button class="btn btn-primary btn-xs"onclick="deleteUser('+value.userId+');"><i class="icon-edit" title="删除">删除</i></button></td>';
 												html += '</tr>';
 												$("#taskResult").append(html);
 											});
